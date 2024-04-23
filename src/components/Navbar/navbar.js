@@ -13,7 +13,8 @@ const Navbar = () => {
  }
 
   return (
-    <nav className="navbar">
+    <>
+    <nav className="navbar border-2 ">
       <a href="https://sasss.shop/">
         <img src={logo} alt="logo" className="logo" />
       </a>
@@ -69,6 +70,7 @@ const Navbar = () => {
         </button>
       </div>
     </nav>
+    </>
   );
 };
 export default Navbar;
