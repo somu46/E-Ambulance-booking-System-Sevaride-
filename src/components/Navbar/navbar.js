@@ -1,7 +1,10 @@
 import React, { useState } from "react";
-import "./navbar.css";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../Assets/Sevaride.png";
+import "./navbar.css";
+
+
+
 const Navbar = () => {
    
   const [hoverAdd, setHoverAdd] = useState(false);
@@ -24,11 +27,9 @@ const Navbar = () => {
       <NavLink
             to="/"
             className={({ isActive }) =>
-              `${isActive ? "text-orange-500" : "text-gray-600"} py-2 px-1 mt-1 mr-8 text-black text-md font-semibold no-underline pr-8`
+              ` ${isActive ? "text-orange-500" : "text-gray-600"} py-2 px-1 mt-1 mr-8 text-black  text-md font-semibold no-underline pr-8 hover:text-orange-600`
             }
-            onMouseEnter={() => setHoverAdd(true)}
-            onMouseLeave={() => setHoverAdd(false)}
-            style={hoverStyle} 
+            style={{ textDecoration: "none", cursor:"pointer" }}
           >
             Home
           </NavLink>
@@ -36,7 +37,7 @@ const Navbar = () => {
         <NavLink
             to="/services"
             className={({ isActive }) =>
-              ` ${isActive ? "text-orange-500" : "text-gray-600"} py-2 px-1 mt-1 mr-8 text-black  text-md font-semibold no-underline pr-8 ListItem`
+              ` ${isActive ? "text-orange-500" : "text-gray-600"} py-2 px-1 mt-1 mr-8 text-black  text-md font-semibold no-underline pr-8 hover:text-orange-600`
             }
             style={{ textDecoration: "none", cursor:"pointer" }}
           >
@@ -45,7 +46,7 @@ const Navbar = () => {
         <NavLink
             to="/about-us"
             className={({ isActive }) => 
-              ` ${isActive ? "text-orange-500" : "text-gray-600"} py-2 px-1 mt-1 mr-8 text-black text-md font-semibold no-underline pr-8 ListItem`
+              ` ${isActive ? "text-orange-500" : "text-gray-600"} py-2 px-1 mt-1 mr-8 text-black text-md font-semibold no-underline pr-8  hover:text-orange-600`
             }
             style={{ textDecoration: "none" , cursor:"pointer"}}
           >
@@ -54,7 +55,7 @@ const Navbar = () => {
         <NavLink
             to="/contact"
             className={({ isActive }) =>
-              ` ${isActive ? "text-orange-500" : "text-gray-600"}  py-2 px-1 mt-1 mr-8 text-black text-md font-semibold no-underline pr-8 ListItem`
+              ` ${isActive ? "text-orange-500" : "text-gray-600"}  py-2 px-1 mt-1 mr-8 text-black text-md font-semibold no-underline pr-8  hover:text-orange-600`
             }
             style={{ textDecoration: "none", cursor:"pointer" }}
           >
