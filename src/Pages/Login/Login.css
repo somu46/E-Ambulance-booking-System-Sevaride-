@@ -77,14 +77,41 @@
     align-items: center;
     width: 220px;
     height: 59px;
-    color: aliceblue;
-    background: blueviolet;
+    /* color: aliceblue; */
+    color: black;
+    background: #eaeaea;
     border-radius: 50px;
     font-size: 19px;
     font-weight: 700;
     cursor: pointer;
+    
 }
 .gray{
-    background: #eaeaea;
-    color: #676767;
+    color:black;
+    background: blueviolet;
+    /* color: #676767; */
 }
+.user-container{
+    display: inline-flex;
+    justify-content: center;
+    gap: 30px;
+}
+.alluser{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 220px;
+    height: 59px;
+    color: aliceblue;
+    background: rgb(116, 32, 32);
+    border-radius: 50px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+    
+}
+
+
+
+  
