@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../Assets/Sevaride.png";
 import "./navbar.css";
@@ -7,13 +7,7 @@ import "./navbar.css";
 
 const Navbar = () => {
    
-  const [hoverAdd, setHoverAdd] = useState(false);
 
- const hoverStyle={
-     color:hoverAdd?"red":"black",
-     textDecoration: "none", 
-     cursor: "pointer"
- }
 
   return (
     <>
@@ -27,7 +21,7 @@ const Navbar = () => {
       <NavLink
             to="/"
             className={({ isActive }) =>
-              ` ${isActive ? "text-orange-500" : "text-gray-600"} py-2 px-1 mt-1 mr-8 text-black  text-md font-semibold no-underline pr-8 hover:text-orange-600`
+              ` ${isActive ? "text-orange-500 " : "text-gray-600"} py-2 px-1 mt-1 mr-8 text-black  text-md font-semibold no-underline pr-8 hover:text-orange-600`
             }
             style={{ textDecoration: "none", cursor:"pointer" }}
           >
