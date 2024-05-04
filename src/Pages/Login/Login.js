@@ -47,7 +47,7 @@ const Login = () => {
               Patient
             </div>
             <div
-              className={action === "Driver" ? "submit gray" : "alluser"}
+              className={action === "Driver" ? "submit gray" : "alluser_Driver" }
               onClick={handleDriverClick}
               color="#e50614"
             >
