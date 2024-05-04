@@ -4,6 +4,7 @@ import user from "../../Assets/person.png";
 import email from "../../Assets/email.png";
 import lock from "../../Assets/password.png";
 import mobile from "../../Assets/phone.png";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [action, setAction] = useState(null); // Initialize action as null
@@ -30,6 +31,8 @@ const Login = () => {
     setAction("Login");
   };
 
+  // const DriverPatient="";
+
   return (
     <>
       <form className="container">
@@ -40,7 +43,7 @@ const Login = () => {
               onClick={handleUserClick}
               color="#324595"
             >
-              User
+              Patient
             </div>
             <div
               className={action === "Driver" ? "submit gray" : "alluser"}
@@ -112,7 +115,7 @@ const Login = () => {
             </div>
 
             {driverInputVisible && ( // Render additional inputs for driver
-              <div className="input">
+              <div className="input  ">
                 {/* Additional inputs for driver */}
                 <input
                   type="text"
@@ -121,6 +124,12 @@ const Login = () => {
                 />
               </div>
             )}
+
+            <div className="relative min-w-full  flex flex-wrap flex-col items-center p-3">
+              <button className="  min-w-[100px] mt-8 border-2 shadow-lg border-red-500 p-2 rounded-md font-semibold text-gray-900 hover:border-blue-500 hover:border-2 transition-all duration-300 ease-in-out hover:tracking-wider">
+                submit
+              </button>
+            </div>
           </div>
         )}
 
@@ -128,13 +137,9 @@ const Login = () => {
           action !== "Sign Up" && ( // Render forgot password link if selection is made and action is not sign up
             <div className="relative flex flex-col flex-wrap justify-center items-center">
               {" "}
-              <button className="  min-w-[100px] mt-8 border-2 shadow-lg border-red-500 p-2 rounded-md font-semibold text-gray-900 hover:border-blue-500 hover:border-2 transition-all duration-300 ease-in-out hover:tracking-wider">
-                submit
-              </button>
               <div className="fogot-password">
-                Forgot Password?<span>click here</span>
+                Forgot Password?<span><Link to="/login">click here</Link></span>
               </div>
-             
             </div>
           )}
       </form>
