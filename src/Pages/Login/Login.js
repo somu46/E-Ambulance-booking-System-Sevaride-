@@ -6,6 +6,9 @@ import lock from "../../Assets/password.png";
 import mobile from "../../Assets/phone.png";
 import { Link } from "react-router-dom";
 
+
+
+
 const Login = () => {
   const [action, setAction] = useState(null); // Initialize action as null
   const [driverInputVisible, setDriverInputVisible] = useState(false);
@@ -30,9 +33,7 @@ const Login = () => {
   const handleLogInClick = () => {
     setAction("Login");
   };
-
-  // const DriverPatient="";
-
+  
   return (
     <>
       <form className="container">
