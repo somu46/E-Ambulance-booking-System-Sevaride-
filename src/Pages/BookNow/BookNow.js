@@ -3,7 +3,7 @@ import { useState } from 'react';
 import './booknow.css';
 import {DirectionsRenderer, GoogleMap, useLoadScript} from '@react-google-maps/api';
 import { Autocomplete } from '@react-google-maps/api';
-import { faL } from '@fortawesome/free-solid-svg-icons';
+// import { faL } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -107,4 +107,4 @@ const destinationRef=useRef()
   )
 }
 
-export default BookNow
+export default BookNow;
