@@ -5,6 +5,7 @@ import App from './App';
 import Root from './Root/Root.js';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { About,Login,Contact, Error,BookNow } from './Pages';
+import Ride from './Pages/Ride/Ride.js';
 
 
 const router= createBrowserRouter([
@@ -33,10 +34,13 @@ const router= createBrowserRouter([
         element:<BookNow/>
       },
       {
+        path:"/ride",
+        element:<Ride/>,
+      },
+      {
         path:"*",
         element:<Error/>,
-      }
-      
+      },
     ]
   },
 ])

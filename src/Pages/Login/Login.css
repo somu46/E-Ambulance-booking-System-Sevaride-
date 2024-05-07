@@ -5,6 +5,8 @@
     margin-top: 100px;
     background:white;
     padding-bottom: 30px;
+    min-height: 50vh;
+    justify-content: center;
 }
 .header{
     display: flex;
@@ -104,11 +106,26 @@
     width: 220px;
     height: 59px;
     color: aliceblue;
-    background: rgb(116, 32, 32);
+    background: #2A6BBC;
     border-radius: 50px;
     font-size: 19px;
     font-weight: 700;
     cursor: pointer;
+    
+}
+.alluser_Driver{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 220px;
+    height: 59px;
+    color: aliceblue;
+    background: #E5383B;
+    border-radius: 50px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer; 
     
 }
 
