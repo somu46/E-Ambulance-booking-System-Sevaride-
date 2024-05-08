@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import ambulancePic from "../../Assets/ambulance-pic.jpg";
 
-
-
 const AmbulanceType = [
   {
     src: ambulancePic,
@@ -24,13 +22,10 @@ const AmbulanceType = [
   },
 ];
 
-
-
-
-const Card = ({ id, isSelected, onSelect,ambulance }) => {
+const Card = ({ id, isSelected, onSelect, ambulance }) => {
   return (
     <div 
-      onClick={() => onSelect(isSelected ? null : id)} // Toggle selection on click
+      onClick={() => onSelect(isSelected ? null : id)} 
       className={`flex flex-wrap flex-row p-1 min-h-[100px] m-1 ${isSelected ? 'border-4 border-black cursor-pointer' : 'hover:border-2 cursor-pointer hover:border-black'}`}>
       <div className="relative max-w-[30%] min-h-[100px] m-2 overflow-hidden items-center">
         <img
@@ -53,6 +48,7 @@ const Card = ({ id, isSelected, onSelect,ambulance }) => {
 
 const Ride = () => {
   const [selectedId, setSelectedId] = useState(null);
+  const [paymentMethod, setPaymentMethod] = useState('Cash'); // State to handle the payment method
 
   return (
     <div className="flex flex-wrap flex-col justify-items-center border-2 max-w-[500px] m-3 mb-0 p-1">
@@ -62,9 +58,8 @@ const Ride = () => {
           Recommended <span>&#8628;</span>
         </p>
       </div>
-      {/* Cards */}
       <div className="flex flex-wrap flex-col items-center m-3 p-1 min-h-[100px] border shadow-md rounded-md">
-      {AmbulanceType.map((ambulance, index) => (
+        {AmbulanceType.map((ambulance, index) => (
           <Card
             key={index}
             id={index}
@@ -74,20 +69,23 @@ const Ride = () => {
           />
         ))}
       </div>
-      {/*card end*/}
-     <div className="flex flex-wrap  flex-row justify-center items-center  border m-1 p-3 ">
-      <input></input>
-        <button className="bg-black text-white px-4 py-2 rounded-md hover:bg-slate-700">
+      <div className="flex flex-wrap flex-row justify-center  border m-1 px-5 py-3">
+        <select 
+          value={paymentMethod} 
+          onChange={e => setPaymentMethod(e.target.value)}
+          className="text-black px-4 py-2 rounded-md border-2 border-black mr-4 ">
+          <option value="Cash">Cash</option>
+          <option value="Online">Online</option>
+        </select>
+        <button className="bg-black text-white px-4 py-2 rounded-md hover:bg-slate-700 ml-[4.75rem]">
           Request a Ride
         </button>
-     </div>
+      </div>
     </div>
   );
 };
 
 export default Ride;
-
-
 
 
 
