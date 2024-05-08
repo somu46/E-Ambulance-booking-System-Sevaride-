@@ -11,17 +11,20 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
   const [action, setAction] = useState(null); // Initialize action as null
+  const [greeting,setGreeting]=useState(null);
   const [driverInputVisible, setDriverInputVisible] = useState(false);
   const [selectionMade, setSelectionMade] = useState(false); // Track whether selection is made or not
 
   const handleUserClick = () => {
     setAction("User");
+    setGreeting("User");
     setDriverInputVisible(false); // Hide driver-specific input fields
     setSelectionMade(true); // Set selection made to true
   };
 
   const handleDriverClick = () => {
     setAction("Driver");
+    setGreeting("Driver");
     setDriverInputVisible(true); // Show driver-specific input fields
     setSelectionMade(true); // Set selection made to true
   };
@@ -60,7 +63,7 @@ const Login = () => {
           <div className="header">
             {/* Render greeting based on user selection */}
             <div className="greeting">
-              {action === "User" ? "Hello User" : "Hello Partner"}
+              {greeting === "User" ? "Hello User" : "Hello Partner"}
             </div>
             <div className="underline"></div>
           </div>
