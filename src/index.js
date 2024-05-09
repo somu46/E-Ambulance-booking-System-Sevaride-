@@ -8,6 +8,7 @@ import { About,Login,Contact, Error,BookNow } from './Pages';
 import Ride from './Pages/Ride/Ride.js';
 
 
+
 const router= createBrowserRouter([
   {
     path:"",
