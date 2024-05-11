@@ -69,21 +69,27 @@ const destinationRef=useRef()
         originRef.current.value=''
         destinationRef.current.value=''
     }
+const handleRide=()=>{
+
+}
+ 
 
   return (
     <div className="home">
        <div className="searchbar">
             <p className="heading">Get a Ride</p>
            <Autocomplete>
-                <input type="text" placeholder="Pickup Location" ref={originRef}></input>
+                <input className=" p-3" type="text" placeholder="Pickup Location" ref={originRef}></input>
            </Autocomplete>
 
            <Autocomplete>
-                <input type="text" placeholder="Dropoff Location" ref={destinationRef}></input>
+                <input  className=" p-3" type="text" placeholder="Dropoff Location" ref={destinationRef}></input>
            </Autocomplete>
            <button type="button" onClick={calculateroute}>Search</button>
            <button type="button" onClick={()=>map.panTo(centera)}>Your Location</button>
            <button type="button" onClick={clearRoute}>Clear Route</button>
+           <button type="button" onClick={handleRide}>continue To ride</button>
+
            <p className="dis_dur">Distance:  {distance} </p>
            <p className="dis_dur">Duration:  {duration}</p>
 
@@ -97,7 +103,7 @@ const destinationRef=useRef()
                options={{
                 zoomControl:false,
                 fullscreenControl:false,
-                // mapTypeControl:false,
+                mapTypeControl:false,
                }}
                 onLoad={(map)=>setmap(map)}
             >
