@@ -52,7 +52,7 @@ const HomeScreen = () => {
 
       {/* background Part */}
       <div className="image-container">
-        <img src={bg} alt="bg" className="bg-image" />
+          <img src={bg} alt="bg" className="bg-image" />
       </div>
     </div>
   );
