@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import Root from './Root/Root.js';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import { About,Login,Contact, Error,BookNow } from './Pages';
+import { About,Login,Contact, Error,BookNow, Services } from './Pages';
 import Ride from './Pages/Ride/Ride.js';
 
 
@@ -36,6 +36,10 @@ const router= createBrowserRouter([
       {
         path:"/ride",
         element:<Ride/>,
+      },
+      {
+        path:"/Services",
+        element:<Services/>,
       },
       {
         path:"*",
