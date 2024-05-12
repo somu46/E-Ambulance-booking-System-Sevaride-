@@ -69,10 +69,7 @@ const destinationRef=useRef()
         originRef.current.value=''
         destinationRef.current.value=''
     }
-const handleRide=()=>{
 
-}
- 
 
   return (
     <div className="home">
@@ -88,7 +85,7 @@ const handleRide=()=>{
            <button type="button" onClick={calculateroute}>Search</button>
            <button type="button" onClick={()=>map.panTo(centera)}>Your Location</button>
            <button type="button" onClick={clearRoute}>Clear Route</button>
-           <button type="button" onClick={handleRide}>continue To ride</button>
+      
 
            <p className="dis_dur">Distance:  {distance} </p>
            <p className="dis_dur">Duration:  {duration}</p>
