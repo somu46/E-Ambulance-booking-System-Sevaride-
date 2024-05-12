@@ -1,0 +1,160 @@
+.heading_services h2{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+}
+.heading_services p{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 200;
+    text-align: center;
+}
+.cards-container {
+    display: flex;
+    justify-content: center;
+}
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+.card1{
+    background-color:blanchedalmond;
+    border-radius: 10px;
+    width: 450px;
+    height: 420px;
+    justify-items: center;
+    align-items: center;
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.card1 img{
+    height: 250px;
+    width: 450px;
+    border-radius: 10px;
+    
+}
+.card-body h5{
+    margin-top: 1px;
+    font-size: larger;
+    font-weight: bold;
+}
+.card-body p{
+    font-size: 20px;
+    font-weight: 200;
+    max-width: 300px;
+    text-align: center;
+}
+.card-body button{
+    background-color:#324595; /* Green background */
+    border: none;
+    color: white; /* White text */
+    padding: 10px 100px; /* Padding */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth hover effect */
+    cursor: pointer;
+    margin-top: 5px;
+}
+.card-body button:hover {
+    background-color: #e50614; /* Darker green on hover */
+}
+.card-body button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2); /* Add focus border */
+}
+
+.card-body button:active {
+    background-color: #970812; /* Darker red on click */
+}
+
+.card2 {
+    background-color: blanchedalmond;
+    border-radius: 10px;
+    width: 920px;
+    height: 420px;
+    justify-items: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.card2 img {
+    margin-top: 15px;
+    height: 350px;
+    width: 450px;
+    border-radius: 10px;
+    float: right;
+}
+
+.card2-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    float: left;
+    width: 400px;
+    margin-left: 5px;
+}
+
+.card2-body h5 {
+    margin-top: 2px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.card2-body p {
+    font-size: 20px;
+    font-weight: 200;
+    width: 400px;
+    text-align: center; /* Center text */
+}
+
+.card2-body button {
+    background-color: #324595; /* Green background */
+    border: none;
+    color: white; /* White text */
+    padding: 10px 100px; /* Padding */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth hover effect */
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.card2-body button:hover {
+    background-color: #e50614; /* Darker green on hover */
+}
+
+.card2-body button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2); /* Add focus border */
+}
+
+.card2-body button:active {
+    background-color: #970812; /* Darker red on click */
+}
