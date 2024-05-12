@@ -46,7 +46,7 @@ const Card = ({ id, isSelected, onSelect, ambulance }) => {
   );
 };
 
-const Ride = () => {
+const Rides = () => {
   const [selectedId, setSelectedId] = useState(null);
   const [paymentMethod, setPaymentMethod] = useState('Cash'); // State to handle the payment method
 
@@ -84,6 +84,37 @@ const Ride = () => {
     </div>
   );
 };
+
+const Ride = () => {
+  const [divParts, setDivParts] = useState(2);
+
+  const handleButtonClick = () => {
+    setDivParts(3);
+  };
+
+  return (
+    <div className="transition-all duration-1000 ease-in-out">
+      <div style={{ display: 'inline-block', width: `${90 / divParts}% ` }}>
+        <div className="bg-blue-500 h-32 m-2">Part 1</div>
+      </div>
+      {divParts === 3 && (
+        <div style={{ display: 'inline-block', width: `${100 / divParts}%` }}>
+          <Rides/>
+        </div>
+      )}
+      <div style={{ display: 'inline-block', width: `${100 / divParts}%` }}>
+        <div className="bg-green-500 h-32 m-2">Part 2</div>
+      
+      </div>
+      
+      <button className="bg-gray-300 py-2 px-4 mt-4" onClick={handleButtonClick}>
+        Divide
+      </button>
+    </div>
+  );
+};
+
+
 
 export default Ride;
 
