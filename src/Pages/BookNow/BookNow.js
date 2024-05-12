@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './booknow.css';
 import {DirectionsRenderer, GoogleMap, useLoadScript} from '@react-google-maps/api';
 import { Autocomplete } from '@react-google-maps/api';
+
 // import { faL } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -69,20 +70,23 @@ const destinationRef=useRef()
         destinationRef.current.value=''
     }
 
+
   return (
     <div className="home">
        <div className="searchbar">
             <p className="heading">Get a Ride</p>
            <Autocomplete>
-                <input type="text" placeholder="Pickup Location" ref={originRef}></input>
+                <input className=" p-3" type="text" placeholder="Pickup Location" ref={originRef}></input>
            </Autocomplete>
 
            <Autocomplete>
-                <input type="text" placeholder="Dropoff Location" ref={destinationRef}></input>
+                <input  className=" p-3" type="text" placeholder="Dropoff Location" ref={destinationRef}></input>
            </Autocomplete>
            <button type="button" onClick={calculateroute}>Search</button>
            <button type="button" onClick={()=>map.panTo(centera)}>Your Location</button>
            <button type="button" onClick={clearRoute}>Clear Route</button>
+      
+
            <p className="dis_dur">Distance:  {distance} </p>
            <p className="dis_dur">Duration:  {duration}</p>
 
