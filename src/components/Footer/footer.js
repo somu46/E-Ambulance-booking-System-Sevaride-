@@ -67,9 +67,9 @@ const Footer = () => {
               <input type="email" name="Email" id="" className=" border-gray-500 rounded-xl w-full md:w-64 lg:w-75 xl:w-120 border px-4 py-2" />
               <button
                 type="submit"
-                className="hover:bg-sky-300  hover:text-red-600 "
+               className=" bg-sky-500 rounded-md ml-3  p-2 border shadow-md cursor-pointer hover:scale-105 transition duration-300 ease-in-out "
               >
-                <p className=" font-semibold bg-sky-500 p-1.5 rounded-md ml-5">
+                <p className=" text-white">
                   Submit
                 </p>
               </button>
