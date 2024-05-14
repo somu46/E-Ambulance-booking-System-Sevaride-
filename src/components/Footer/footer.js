@@ -25,10 +25,10 @@ const Footer = () => {
             >
               <p>Training</p>
             </p>
-            <a href="###" className="text-sm items-start text-left m-1 ">
+            <a href="###" className="text-sm items-start text-left m-1  hover:text-red-600 ">
               Driver Training
             </a>
-            <a href="###" className="text-sm items-start text-left m-1 ">
+            <a href="###" className="text-sm items-start text-left m-1  hover:text-red-600 ">
               Paramedical Training Institute
             </a>
           </div>
@@ -39,16 +39,16 @@ const Footer = () => {
             >
               <p>SERVICES</p>
             </p>
-            <a href="###" className="text-sm items-start text-left m-1 ">
+            <a href="###" className="text-sm items-start text-left m-1   hover:text-red-600 ">
               Contact Us
             </a>
-            <a href="###" className="text-sm items-start text-left m-1 ">
+            <a href="###" className="text-sm items-start text-left m-1   hover:text-red-600 ">
               Payment Methods
             </a>
-            <a href="###" className="text-sm  items-start text-left m-1">
+            <a href="###" className="text-sm  items-start text-left m-1  hover:text-red-600 ">
               Delivary
             </a>
-            <a href="###" className="text-sm items-start text-left m-1">
+            <a href="###" className="text-sm items-start text-left m-1  hover:text-red-600 ">
               Return & Exchanges
             </a>
           </div>
@@ -76,7 +76,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
+        
         <div className="relative flex flex-wrap flex-row justify-evenly min-w-screen m-3 p-1 border-t-2 border-[#292929] min-w-[75%]">
           <p className="text-black font-semibold">
             Copyright © 2024 All rights reserved | This Awesome site is made
