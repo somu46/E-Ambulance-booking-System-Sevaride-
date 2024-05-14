@@ -1,7 +1,15 @@
 import React from "react";
 import "./footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+ 
+
+  const handleHistory=()=>{
+    // history.push('/Contact');
+    window.screenTop(0,0);
+  }
+
   return (
     <footer className="footer overflow-x-hidden min-w-[100%]">
       <div class=" relative flex flex-wrap flex-row justify-evenly min-w-full min-h-10 p-4 bg-white mx-1 mt-3 element ">
@@ -19,15 +27,15 @@ const Footer = () => {
             </p>
           </div>
           <div className=" relative flex flex-wrap flex-col  max-w-[25%] h-auto text-black font-semibold m-3 p-4 min-h-9">
-            <p
-              href="/"
+            <Link
+              to="/Services"
               className="text-xl text-center font-bold m-3 border-b-2 border-red-600 hover:text-red-600"
             >
               <p>Training</p>
-            </p>
-            <a href="###" className="text-sm items-start text-left m-1  hover:text-red-600 ">
+            </Link>
+            <Link to="/Services" className="text-sm items-start text-left m-1  hover:text-red-600 ">
               Driver Training
-            </a>
+            </Link>
             <a href="###" className="text-sm items-start text-left m-1  hover:text-red-600 ">
               Paramedical Training Institute
             </a>
@@ -39,15 +47,15 @@ const Footer = () => {
             >
               <p>SERVICES</p>
             </p>
-            <a href="###" className="text-sm items-start text-left m-1   hover:text-red-600 ">
+            <Link to="/Contact" onClick={handleHistory} className="text-sm items-start text-left m-1   hover:text-red-600 ">
               Contact Us
-            </a>
-            <a href="###" className="text-sm items-start text-left m-1   hover:text-red-600 ">
+            </Link>
+            <Link href="###" className="text-sm items-start text-left m-1   hover:text-red-600 ">
               Payment Methods
-            </a>
-            <a href="###" className="text-sm  items-start text-left m-1  hover:text-red-600 ">
+            </Link>
+            <Link to="/Services" className="text-sm  items-start text-left m-1  hover:text-red-600 ">
               Delivary
-            </a>
+            </Link>
             <a href="###" className="text-sm items-start text-left m-1  hover:text-red-600 ">
               Return & Exchanges
             </a>
