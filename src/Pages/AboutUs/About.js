@@ -4,7 +4,7 @@ import React from 'react'
      
   return (
        <>
-       <div className='text-3xl text-red-600 font-bold text-center'>About Us ! This page is under Devlopment</div>
+       <div className='flex flex-wrap  justify-center items-center text-4xl text-red-600 font-bold  min-h-screen '>About Us ! This page is under Devlopment</div>
 
 
        </>  

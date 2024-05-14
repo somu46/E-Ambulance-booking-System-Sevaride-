@@ -1,15 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import bg from "../../Assets/file.png";
 import "./homescreen.css";
-import { Link } from "react-scroll";
-import { BookNow } from "../../Pages";
+// import { Link } from "react-scroll";
+// import { BookNow } from "../../Pages";
 import { NavLink } from "react-router-dom";
+// import { BookNow } from "../../Pages";
 
 const HomeScreen = () => {
-  const [isBookingPageOpen, setIsBookingPageOpen] = useState(false);
-  const handleClickBookNow = () => {
-    setIsBookingPageOpen(true);
-  };
+  // const [isBookingPageOpen, setIsBookingPageOpen] = useState(false);
+  // const handleClickBookNow = () => {
+  //   setIsBookingPageOpen(true);
+  // };
 
   return (
     <div className="container-home">
@@ -25,25 +26,26 @@ const HomeScreen = () => {
         </p>
 
         <div>
-
           <div>
             <NavLink to="/BookNow">
               <button
                 // onClick={handleClickBookNow}
                 className=" bg-red-500 mt-5 text-white border-none py-3 px-10 text-lg cursor-pointer rounded-lg w-[70%] hover:scale-105 transition duration-300 ease-in-out"
               >
-                Book Now
+                <p className="space-x-1 hover:font-light transition-all duration-300 ease-in-out hover:tracking-wider">
+                  <span>{"Book".toUpperCase()}</span>
+                  <span>{"now".toUpperCase()}</span>
+                </p>
               </button>
             </NavLink>
           </div>
-
         </div>
         <div>
           <p>or</p>
           <h3>book our assistance</h3>
           {/* <a href='tel:+9123813528' role='button' className='callnow'><i className='telno'></i>+91 9123813528</a> */}
           <button className=" bg-white border-4 border-rose-500 text-rose-500 text-xl py-3 px-10 font-semibold cursor-pointer rounded-lg mt-3 w-[70%] hover:border-blue-400 hover:text-blue-400 transition-all duration-300 ease-in-out hover:tracking-wider">
-            <a href='tel:+9123813528'>
+            <a href="tel:+9123813528">
               <i class="fas fa-phone"></i>+91 9123813528
             </a>
           </button>
