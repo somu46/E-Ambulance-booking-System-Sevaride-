@@ -119,7 +119,7 @@ const Login = () => {
             </div>
 
             {driverInputVisible && ( // Render additional inputs for driver
-              <div className="input  ">
+              <div className="input pa ">
                 {/* Additional inputs for driver */}
                 <input
                   type="text"
