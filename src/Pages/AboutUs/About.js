@@ -20,6 +20,10 @@ const About = () => {
             "Dedicated Helpline Number",
     ];
   return (
+
+       <>
+       <div className='flex flex-wrap  justify-center items-center text-4xl text-red-600 font-bold  min-h-screen '>About Us ! This page is under Devlopment</div>
+
     <div className="about">
       <div className="sevaride">
         <h1>What is Sevaride</h1>
@@ -78,6 +82,7 @@ const About = () => {
       </div>
       <div className="founders">
         <div className='founders_image'>
+
 
 
         </div>
