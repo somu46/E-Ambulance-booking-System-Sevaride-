@@ -76,15 +76,7 @@ const About = () => {
         </div>
 
       </div>
-      <div className="founders">
-        <div className='founders_image'>
-
-
-        </div>
-        <div className="details">
-          
-        </div>
-      </div>
+      
     </div>
   )
 }
