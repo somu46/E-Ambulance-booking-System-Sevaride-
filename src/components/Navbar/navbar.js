@@ -2,6 +2,7 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../Assets/Sevaride.png";
 import "./navbar.css";
+import Button from "../Button/Button";
 
 
 
@@ -59,10 +60,12 @@ const Navbar = () => {
 
       <div className="flex justify-end">
     
-        <button className=" bg-red-400 mt-5 mr-3 text-white border-none py-2.5 px-5 text-md  rounded-md  hover:scale-100 transition duration-300 ease-in-out">
+        {/* <button className=" bg-red-400 mt-5 mr-3 text-white border-none py-2.5 px-5 text-md  rounded-md  hover:scale-100 transition duration-300 ease-in-out"> */}
         
-          <Link to="/login" className=" text-xl px-1 transition-all duration-300 ease-in-out hover:tracking-wider"> Login</Link>
-        </button>
+          <Link to="/login" > 
+              <Button title={"Login"}/>
+          </Link>
+       
       </div>
     </nav>
     </>

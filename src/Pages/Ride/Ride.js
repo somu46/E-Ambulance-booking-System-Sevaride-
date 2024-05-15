@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ambulancePic from "../../Assets/ambulance-pic.jpg";
+import Button from "../../components/Button/Button";
 
 const AmbulanceType = [
   {
@@ -24,9 +25,14 @@ const AmbulanceType = [
 
 const Card = ({ id, isSelected, onSelect, ambulance }) => {
   return (
-    <div 
-      onClick={() => onSelect(isSelected ? null : id)} 
-      className={`flex flex-wrap flex-row p-1 min-h-[100px] m-1 ${isSelected ? 'border-4 border-black cursor-pointer' : 'hover:border-2 cursor-pointer hover:border-black'}`}>
+    <div
+      onClick={() => onSelect(isSelected ? null : id)}
+      className={`flex flex-wrap flex-row p-1 min-h-[100px] m-1 ${
+        isSelected
+          ? "border-4 border-black cursor-pointer"
+          : "hover:border-2 cursor-pointer hover:border-black"
+      }`}
+    >
       <div className="relative max-w-[30%] min-h-[100px] m-2 overflow-hidden items-center">
         <img
           className="relative max-h-[150px] w-full items-start p-2 "
@@ -36,7 +42,9 @@ const Card = ({ id, isSelected, onSelect, ambulance }) => {
       </div>
       <div className="max-w-[40%] p-1">
         <p className="text-black text-lg font-bold">{ambulance.type}</p>
-        <p className="font-mono"><span>9 mins away</span> <span>9:30</span></p>
+        <p className="font-mono">
+          <span>9 mins away</span> <span>9:30</span>
+        </p>
         <p className="font-semibold">{ambulance.Description}</p>
       </div>
       <div className="flex items-center max-w-[30%] p-1 m-1 ml-auto">
@@ -48,7 +56,7 @@ const Card = ({ id, isSelected, onSelect, ambulance }) => {
 
 const Rides = () => {
   const [selectedId, setSelectedId] = useState(null);
-  const [paymentMethod, setPaymentMethod] = useState('Cash'); // State to handle the payment method
+  const [paymentMethod, setPaymentMethod] = useState("Cash"); // State to handle the payment method
 
   return (
     <div className="flex flex-wrap flex-col justify-items-center border-2 max-w-[500px] m-3 mb-0 p-1">
@@ -70,10 +78,11 @@ const Rides = () => {
         ))}
       </div>
       <div className="flex flex-wrap flex-row justify-center  border m-1 px-5 py-3">
-        <select 
-          value={paymentMethod} 
-          onChange={e => setPaymentMethod(e.target.value)}
-          className="text-black px-4 py-2 rounded-md border-2 border-black mr-4 ">
+        <select
+          value={paymentMethod}
+          onChange={(e) => setPaymentMethod(e.target.value)}
+          className="text-black px-4 py-2 rounded-md border-2 border-black mr-4 "
+        >
           <option value="Cash">Cash</option>
           <option value="Online">Online</option>
         </select>
@@ -94,32 +103,27 @@ const Ride = () => {
 
   return (
     <div className="transition-all duration-1000 ease-in-out">
-      <div style={{ display: 'inline-block', width: `${90 / divParts}% ` }}>
+      <div style={{ display: "inline-block", width: `${90 / divParts}% ` }}>
         <div className="bg-blue-500 h-32 m-2">Part 1</div>
       </div>
       {divParts === 3 && (
-        <div style={{ display: 'inline-block', width: `${100 / divParts}%` }}>
-          <Rides/>
+        <div style={{ display: "inline-block", width: `${100 / divParts}%` }}>
+          <Rides />
         </div>
       )}
-      <div style={{ display: 'inline-block', width: `${100 / divParts}%` }}>
+      <div style={{ display: "inline-block", width: `${100 / divParts}%` }}>
         <div className="bg-green-500 h-32 m-2">Part 2</div>
-      
       </div>
-      
-      <button className="bg-gray-300 py-2 px-4 mt-4" onClick={handleButtonClick}>
+
+      <div className=" flex flex-wrap  justify-center items-center ">
+     <button className="m-0 p-0" onClick={handleButtonClick}  >  <Button title={"Divide"} /> </button> 
+      </div>
+
+      {/* <button className="bg-gray-300 py-2 px-4 mt-4" onClick={handleButtonClick}>
         Divide
-      </button>
+      </button> */}
     </div>
   );
 };
 
-
-
 export default Ride;
-
-
-
-
-
-
