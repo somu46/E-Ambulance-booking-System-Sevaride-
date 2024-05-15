@@ -58,10 +58,10 @@ const Navbar = () => {
       </div>
 
       <div className="flex justify-end">
-        {/* <button className="text-blue-500 hover:text-gray-300">Login/SignUp</button> */}
-        <button className=" bg-red-400 mt-5 text-white border-none py-3 px-5 text-md cursor-pointer rounded-md  hover:scale-105 transition duration-300 ease-in-out">
+    
+        <button className=" bg-red-400 mt-5 mr-3 text-white border-none py-2.5 px-5 text-md  rounded-md  hover:scale-100 transition duration-300 ease-in-out">
         
-          <Link to="/login"> Login/SignUp</Link>
+          <Link to="/login" className=" text-xl px-1 transition-all duration-300 ease-in-out hover:tracking-wider"> Login</Link>
         </button>
       </div>
     </nav>

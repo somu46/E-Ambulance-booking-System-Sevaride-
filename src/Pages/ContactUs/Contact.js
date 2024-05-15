@@ -6,6 +6,9 @@ import mobile from "../../Assets/phone.png";
 import contact from "../../Assets/contactus.png"
 function Contact() {
   return (
+
+    <>  
+
     <div className="contact">
       <div className="contactus">
         <div className="map">
@@ -47,7 +50,7 @@ function Contact() {
         </div>
       </div>
     </div>
-
+    </>
 
   )
 }

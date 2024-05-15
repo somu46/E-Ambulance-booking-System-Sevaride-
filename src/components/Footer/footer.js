@@ -1,7 +1,14 @@
 import React from "react";
 import "./footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+ 
+
+  const handleHistory=()=>{
+    window.screenTop(0,0);
+  }
+
   return (
     <footer className="footer overflow-x-hidden min-w-[100%]">
       <div class=" relative flex flex-wrap flex-row justify-evenly min-w-full min-h-10 p-4 bg-white mx-1 mt-3 element ">
@@ -19,16 +26,16 @@ const Footer = () => {
             </p>
           </div>
           <div className=" relative flex flex-wrap flex-col  max-w-[25%] h-auto text-black font-semibold m-3 p-4 min-h-9">
-            <p
-              href="/"
+            <Link
+              to="/Services"
               className="text-xl text-center font-bold m-3 border-b-2 border-red-600 hover:text-red-600"
             >
               <p>Training</p>
-            </p>
-            <a href="###" className="text-sm items-start text-left m-1 ">
+            </Link>
+            <Link to="/Services" className="text-sm items-start text-left m-1  hover:text-red-600 ">
               Driver Training
-            </a>
-            <a href="###" className="text-sm items-start text-left m-1 ">
+            </Link>
+            <a href="###" className="text-sm items-start text-left m-1  hover:text-red-600 ">
               Paramedical Training Institute
             </a>
           </div>
@@ -39,16 +46,16 @@ const Footer = () => {
             >
               <p>SERVICES</p>
             </p>
-            <a href="###" className="text-sm items-start text-left m-1 ">
+            <Link to="/Contact" onClick={handleHistory} className="text-sm items-start text-left m-1   hover:text-red-600 ">
               Contact Us
-            </a>
-            <a href="###" className="text-sm items-start text-left m-1 ">
+            </Link>
+            <Link href="###" className="text-sm items-start text-left m-1   hover:text-red-600 ">
               Payment Methods
-            </a>
-            <a href="###" className="text-sm  items-start text-left m-1">
+            </Link>
+            <Link to="/Services" className="text-sm  items-start text-left m-1  hover:text-red-600 ">
               Delivary
-            </a>
-            <a href="###" className="text-sm items-start text-left m-1">
+            </Link>
+            <a href="###" className="text-sm items-start text-left m-1  hover:text-red-600 ">
               Return & Exchanges
             </a>
           </div>
@@ -64,19 +71,19 @@ const Footer = () => {
               promos!
             </p>
             <div className="relative flex  flex-row m-3">
-              <input type="email" name="Email" id="" className="border-2 border-gray-500 rounded-sm" />
+              <input type="email" name="Email" id="" className=" border-gray-500 rounded-xl w-full md:w-64 lg:w-75 xl:w-120 border px-4 py-2" />
               <button
                 type="submit"
-                className="hover:bg-sky-300  hover:text-red-600"
+               className=" bg-sky-500 rounded-md ml-3  p-2 border shadow-md cursor-pointer hover:scale-105 transition duration-300 ease-in-out "
               >
-                <p className=" font-semibold bg-sky-500 p-1 rounded-md ">
+                <p className=" text-white">
                   Submit
                 </p>
               </button>
             </div>
           </div>
         </div>
-
+        
         <div className="relative flex flex-wrap flex-row justify-evenly min-w-screen m-3 p-1 border-t-2 border-[#292929] min-w-[75%]">
           <p className="text-black font-semibold">
             Copyright © 2024 All rights reserved | This Awesome site is made

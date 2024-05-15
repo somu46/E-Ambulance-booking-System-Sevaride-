@@ -4,6 +4,7 @@ import user from "../../Assets/person.png";
 import email from "../../Assets/email.png";
 import lock from "../../Assets/password.png";
 import mobile from "../../Assets/phone.png";
+import License from "../../Assets/License.png";
 import { Link } from "react-router-dom";
 
 
@@ -119,8 +120,9 @@ const Login = () => {
             </div>
 
             {driverInputVisible && ( // Render additional inputs for driver
-              <div className="input  ">
+              <div className="input">
                 {/* Additional inputs for driver */}
+                <img src={License} alt="License" />
                 <input
                   type="text"
                   className="inputBox"
