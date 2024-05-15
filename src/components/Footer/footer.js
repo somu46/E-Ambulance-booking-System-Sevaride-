@@ -6,7 +6,6 @@ const Footer = () => {
  
 
   const handleHistory=()=>{
-    // history.push('/Contact');
     window.screenTop(0,0);
   }
 
