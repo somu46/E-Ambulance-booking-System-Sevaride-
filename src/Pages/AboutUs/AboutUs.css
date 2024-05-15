@@ -1,8 +1,132 @@
-.history h2{
-   font-weight: bold;
-   font-size: large;
-   text-align: center;
+.about{
+    margin-top: 25px;
 }
-.history p{
+.sevaride h1 {
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center !important;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin: 0px 0px 8px;
+    margin-bottom: .5rem;
+    line-height: 1.2;
+    color: #fc2361;
+
+}
+.sevaride p{
+    font-size: 24px;
+    padding: 0px 240px 0px;
+    text-align: center;
     font-weight: 400;
+
+}
+.history{
+    display: flex;
+    margin-top: 30px;
+}
+.history_paragraph h1{
+    padding-top: 20px;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+   margin-top: -25px;
+    margin-bottom: .5rem;
+    line-height: 1.2;
+    color: #fc2361;
+    text-align: center;
+}
+.history_paragraph p{
+    font-size: 20px;
+    padding-left: 115px;
+    padding-right: 50px;
+    text-align: justify;
+    line-height: 1.5;
+}
+.history_image img{
+    height: 260px;
+    width: 2700px;
+    padding-right: 100px;
+    margin-top: 28px;
+}
+.service_promise{
+    display: flex;
+    margin-top: 25px;
+}
+.image img{
+    height: 270px;
+    width: 2300px;
+
+}
+.content h1{
+        padding-top: 20px;
+        font-size: 30px;
+        font-weight: bolder;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+       margin-top: -25px;
+        margin-bottom: .5rem;
+        line-height: 1.2;
+        color: #fc2361;
+        text-align: center;
+}
+.content p{
+    font-size: 20px;
+    line-height: 1.5;
+    padding-right: 100px;
+    text-align: justify;
+    margin-left: 190px;
+}
+.box{
+    display: flex;
+    margin-left: 115px;
+    margin-right: 50px;
+    margin-top: 25px;
+}
+.problem{
+    width: 540px;
+    height: 650px;
+    margin: 10px;
+    padding: 25px;
+    border: 5px solid#ffe8ef;
+    background-color: #ffe8ef;
+    border-radius: 25px;
+
+}
+.problem h1{
+    color: #fc2361;
+    margin-bottom: 1.5rem !important;
+    margin-top: -15px !important;
+    font-size: 28px;
+    font-weight: bolder;
+}
+.problem p{
+line-height: 1.8rem;
+}
+.problem .list {
+    list-style-type:disc;
+    margin-top: 7px;
+    font-size: 17px;
+    font-weight: 500;
+}
+.solution{
+    width: 540px;
+    height: 650px;
+    margin: 10px;
+    padding: 25px;
+    background-color: #e9fbff;
+    border-radius: 25px;
+}
+.solution h1{
+    color: #31c5fe;
+    margin-bottom: 1.5rem !important;
+    margin-top: -15px !important;
+    font-size: 28px;
+    font-weight: bolder;
+}
+.solution p{
+    line-height: 1.8rem;
+}
+.solution .list{
+    list-style-type:disc;
+    margin-top: 7px;
+    font-size: 17px;
+    font-weight: 500;
 }

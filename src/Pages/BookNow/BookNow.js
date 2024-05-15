@@ -69,7 +69,17 @@ const destinationRef=useRef()
         originRef.current.value=''
         destinationRef.current.value=''
     }
-
+   /* function getLocation(){
+        if(navigator.geolocation)
+            {
+                navigator.geolocation.getCurrentPosition();
+            }
+        else
+        {
+            return <div>geolocation is not loades</div>
+        }
+    }*/
+   
   return (
     <div className="home">
        <div className="searchbar">
@@ -95,7 +105,7 @@ const destinationRef=useRef()
                 zoom={10}
                 center={center}
                options={{
-                zoomControl:false,
+                zoomControl:true,
                 fullscreenControl:false,
                 // mapTypeControl:false,
                }}
