@@ -98,7 +98,7 @@ const destinationRef=useRef()
                 zoom={10}
                 center={center}
                options={{
-                zoomControl:false,
+                zoomControl:true,
                 fullscreenControl:false,
                 mapTypeControl:false,
                }}
