@@ -64,12 +64,12 @@ const Footer = () => {
               promos!
             </p>
             <div className="relative flex  flex-row m-3">
-              <input type="email" name="Email" id="" className="border-2 border-gray-500 rounded-sm" />
+              <input type="email" name="Email" id="" className=" border-gray-500 rounded-xl w-full md:w-64 lg:w-75 xl:w-120 border px-4 py-2" />
               <button
                 type="submit"
-                className="hover:bg-sky-300  hover:text-red-600"
+                className="hover:bg-sky-300  hover:text-red-600 "
               >
-                <p className=" font-semibold bg-sky-500 p-1 rounded-md ">
+                <p className=" font-semibold bg-sky-500 p-1.5 rounded-md ml-5">
                   Submit
                 </p>
               </button>

@@ -4,10 +4,14 @@ import './index.css';
 import App from './App';
 import Root from './Root/Root.js';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import { About,Login,Contact, Error,BookNow } from './Pages';
+import { About,Login,Contact, Error,BookNow, Services } from './Pages';
 import Ride from './Pages/Ride/Ride.js';
 
 
+const link = document.createElement('link');
+link.href = 'https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap';
+link.rel = 'stylesheet';
+document.head.appendChild(link);
 
 const router= createBrowserRouter([
   {
@@ -37,6 +41,10 @@ const router= createBrowserRouter([
       {
         path:"/ride",
         element:<Ride/>,
+      },
+      {
+        path:"/Services",
+        element:<Services/>,
       },
       {
         path:"*",
