@@ -7,9 +7,7 @@ import contact from "../../Assets/contactus.png"
 function Contact() {
   return (
 
-      <>
-      <div className='flex flex-wrap  justify-center items-center text-4xl text-red-600 font-bold text-center min-h-screen'>Contact Us  ! This page is under Devlopment</div>
-      </>  
+    <>  
 
     <div className="contact">
       <div className="contactus">
@@ -52,8 +50,7 @@ function Contact() {
         </div>
       </div>
     </div>
-
-
+    </>
 
   )
 }
