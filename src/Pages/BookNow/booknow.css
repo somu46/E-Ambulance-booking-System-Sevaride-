@@ -1,16 +1,27 @@
 .home{
     display: flex;
+    max-width: 100%;
+    overflow: hidden;
 }
 
-/*Search Bar Box CSS*/
 
+
+.map{
+   
+    margin-top: 3px;
+    margin-left: auto;
+    border: 0px solid #e0dede;
+    box-shadow: #e0dede;
+}
+/*Search Bar Box CSS*/
 .searchbar{
     box-sizing: border-box;
     width: 320px;
     height: 420px;
     border: 0px solid #e0dede;
     border-radius: 10px;
-    padding:  3px 10px 10px;
+    padding:  3px 10px 10px ;
+    margin-top: 5px;
     margin-left: 45px;
     margin-right: 40px;
 }
