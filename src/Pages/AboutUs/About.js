@@ -62,7 +62,7 @@ const About = () => {
           </p>
           <ul className="list">
             {problems.map((item,index)=>(
-              <li key={0}>{item}</li>
+              <li key={index}>{item}</li>
             ))}
           </ul>
         </div>
@@ -71,7 +71,7 @@ const About = () => {
           <p>Medulance Healthcare is India's first & leading comprehensive emergency response service provider, extensively dealing in the Ambulatory Services. We provide -</p>
           <ul className="list">
             {solutions.map((item,index)=>(
-              <li key={0}>{item}</li>
+              <li key={index}>{item}</li>
             ))}
           </ul>
         </div>
