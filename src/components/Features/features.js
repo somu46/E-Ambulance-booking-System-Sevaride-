@@ -10,8 +10,8 @@ import support from '../../Assets/customer support.svg'
 
 const features = () => {
   return (
-    <div className='feature'>
-        <h2>App features</h2>
+    <div className='feature bg-gradient-to-r from-blue-600 via-purple-400 to-pink-500  hover:from-pink-500 hover:to-yellow-500 ...'>
+        <h2 >App features</h2>
         <h3>Book ambulances in emergency or in advance. Experience our seamless platform.</h3>
 
       <div className='features-part'>

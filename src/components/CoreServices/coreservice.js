@@ -25,6 +25,14 @@ const coreservice = () => {
             <h5>Govt.</h5>
             <p>SevaRide is working with the Government on a Public Private Partnership and PSU.</p>
         </div> 
+        <div className='cservice hover:bg-pink-200'>
+            <h5>Corporate</h5>
+            <p>SevaRide is working with different corporate and providing ambulance for them.</p>
+        </div>
+        <div className='cservice hover:bg-pink-200'>
+            <h5>Individual</h5>
+            <p>Anyone can book ambulance through website and mobile app.</p>
+        </div>
   </div>   
 </div>
   )

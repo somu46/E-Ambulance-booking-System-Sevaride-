@@ -89,6 +89,7 @@ const Rides = () => {
         <button className="bg-black text-white px-4 py-2 rounded-md hover:bg-slate-700 ml-[4.75rem]">
           Request a Ride
         </button>
+       
       </div>
     </div>
   );
@@ -100,6 +101,9 @@ const Ride = () => {
   const handleButtonClick = () => {
     setDivParts(3);
   };
+  const handleButtonClickBack=()=>{
+    setDivParts(2);
+  }
 
   return (
     <div className="transition-all duration-1000 ease-in-out">
@@ -116,12 +120,21 @@ const Ride = () => {
       </div>
 
       <div className=" flex flex-wrap  justify-center items-center ">
-     <button className="m-0 p-0" onClick={handleButtonClick}  >  <Button title={"Divide"} /> </button> 
+        <button className="m-0 p-0" onClick={handleButtonClick}>
+          {" "}
+          <Button title={"Divide"} />{" "}
+        </button>
       </div>
+      <div className=" flex flex-wrap  justify-center items-center ">
+      <button
+          type="button"
+          onClick={handleButtonClickBack}
+          class="   p-3 rounded-md text-xl ml-10 mr-auto bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 ..."
+        >
+          Return Back
+        </button>
+        </div >
 
-      {/* <button className="bg-gray-300 py-2 px-4 mt-4" onClick={handleButtonClick}>
-        Divide
-      </button> */}
     </div>
   );
 };

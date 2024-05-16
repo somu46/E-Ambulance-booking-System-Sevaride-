@@ -5,7 +5,8 @@
     flex-direction: column; 
     align-items: center; 
     border-radius: 0.375rem; 
-    background-image: linear-gradient(to right, #324595, #e50614);
+    color: black;
+    /* background-image: linear-gradient(to right, #324595, #e50614); */
     max-width: 80%;
     
 }
@@ -33,6 +34,7 @@
 .features{
     display: flex; 
     margin: 1.5rem; 
+    padding: 3px;
     flex-direction: column; 
     flex-wrap: wrap; 
     align-items: center; 
