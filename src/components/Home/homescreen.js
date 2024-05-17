@@ -1,16 +1,12 @@
 import React from "react";
 import bg from "../../Assets/file.png";
 import "./homescreen.css";
-// import { Link } from "react-scroll";
-// import { BookNow } from "../../Pages";
+
 import { NavLink } from "react-router-dom";
-// import { BookNow } from "../../Pages";
+;
 
 const HomeScreen = () => {
-  // const [isBookingPageOpen, setIsBookingPageOpen] = useState(false);
-  // const handleClickBookNow = () => {
-  //   setIsBookingPageOpen(true);
-  // };
+
 
   return (
     <div className="container-home">

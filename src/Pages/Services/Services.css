@@ -25,7 +25,7 @@
     background-color:white;
     border-radius: 10px;
     width: 450px;
-    height: 420px;
+    height: 460px;
     justify-items: center;
     align-items: center;
     display: flex;
@@ -60,31 +60,33 @@
     max-width: 300px;
     text-align: center;
 }
-.card-body button{
-    background-color:#324595; /* Green background */
-    border: none;
-    color: white; /* White text */
-    padding: 10px 100px; /* Padding */
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 8px; /* Rounded corners */
-    transition: background-color 0.3s; /* Smooth hover effect */
-    cursor: pointer;
-    margin-top: 5px;
-}
-.card-body button:hover {
-    background-color: #e50614; /* Darker green on hover */
-}
-.card-body button:focus {
-    outline: none; /* Remove default focus outline */
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2); /* Add focus border */
-}
 
-.card-body button:active {
-    background-color: #970812; /* Darker red on click */
-}
+/* .card-body button{ */
+    /* background-color:#324595; Green background */
+    /* border: none; */
+    /* color: white; White text */
+    /* padding: 10px 100px; Padding */
+    /* text-align: center; */
+    /* text-decoration: none; */
+    /* display: inline-block; */
+    /* font-size: 16px; */
+    /* border-radius: 8px; Rounded corners */
+    /* transition: background-color 0.3s; Smooth hover effect */
+    /* cursor: pointer; */
+    /* margin-top: 5px; */
+/* } */
+
+/* .card-body button:hover { */
+    /* background-color: #e50614; Darker green on hover */
+/* } */
+/* .card-body button:focus { */
+    /* outline: none; Remove default focus outline */
+    /* box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2); Add focus border */
+/* } */
+
+/* .card-body button:active { */
+    /* background-color: #970812; Darker red on click */
+/* } */
 
 .card2 {
     /* background-color: rgb(252, 252, 252); */
@@ -133,30 +135,3 @@
     text-align: center; /* Center text */
 }
 
-.card2-body button {
-    background-color: #324595; /* Green background */
-    border: none;
-    color: white; /* White text */
-    padding: 10px 100px; /* Padding */
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 8px; /* Rounded corners */
-    transition: background-color 0.3s; /* Smooth hover effect */
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.card2-body button:hover {
-    background-color: #e50614; /* Darker green on hover */
-}
-
-.card2-body button:focus {
-    outline: none; /* Remove default focus outline */
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2); /* Add focus border */
-}
-
-.card2-body button:active {
-    background-color: #970812; /* Darker red on click */
-}
