@@ -21,7 +21,7 @@ const Services = () => {
           <div className="cards p-3  ">\
 
             <div className="card1 border-2 shadow-md mb-3 ">
-              <img src={corporate} alt="Card1 " />
+              <img src={corporate} alt="Corporate " />
               <div class="card-body">
                 <h5>Corporate</h5>
                 <p>
@@ -34,7 +34,7 @@ const Services = () => {
               </div>
             </div>
             <div className="card1 border-2 shadow-md mb-3 ">
-              <img src={hospital} alt="Card1" />
+              <img src={hospital} alt="Hospitals " />
               <div class="card-body">
                 <h5>Hospitals</h5>
                 <p>
@@ -47,7 +47,7 @@ const Services = () => {
               </div>
             </div>
             <div className="card1 mt-5 border-2 shadow-md mb-3 ">
-              <img src={govt} alt="Card1" />
+              <img src={govt} alt="Goverments" />
               <div class="card-body">
                 <h5>Goverments</h5>
                 <p>
@@ -60,7 +60,7 @@ const Services = () => {
               </div>
             </div>
             <div className="card1 border-2 shadow-md mt-3">
-              <img src={airam} alt="Card1" />
+              <img src={airam} alt="Corporate" />
               <div class="card-body">
                 <h5>Corporate</h5>
                 <p>
