@@ -6,6 +6,9 @@ import Root from './Root/Root.js';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { About,Login,Contact, Error,BookNow, Services } from './Pages';
 import Ride from './Pages/Ride/Ride.js';
+import SignUpRoot from './Pages/SignUp/RootOutelet/SignUpLogInRoot.js';
+import {User,Driver} from './Pages/SignUp/index.js';
+
 
 
 const link = document.createElement('link');
@@ -23,8 +26,22 @@ const router= createBrowserRouter([
         element:<App/>
       },
       {
-        path:"/login",
-        element:<Login/>,
+        path:"login",
+        element:<SignUpRoot/>,
+         children:[
+          {
+            path:"",
+            element:<Login/>
+          },
+           {
+            path:"user",
+            element:<User/>,
+           },
+           {
+            path:"driver",
+            element:<Driver/>
+           }
+         ]
       },
       {
         path:"about-us",
@@ -57,7 +74,6 @@ const router= createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      {/* <RouterProvider router={router} /> */}
       <RouterProvider router={router}/>
   </React.StrictMode>
 );
