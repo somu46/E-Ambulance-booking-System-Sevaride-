@@ -1,64 +1,137 @@
+/* Contact.css */
 
-.contactus{
+.contact {
     display: flex;
-}
-
-.map{
-    margin-left: 110px;
-    margin-top: 50px;
-    margin-right: 15px;
-}
-.details{
-    margin-top: 50px;
-    width: 600px;
-    height: 500px;
-    background-color: #ffffff;
-    margin-right: 110px;
-    margin-left: 15px;
-    border-radius: 25px;
-    padding-top: 35px;
-    padding-bottom: 35px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-.details h2{
-    font-size: 22px;
-    font-weight: bold;
-    margin-top: 15px;
-    margin-left: 35px;
-    color: #fc2361;
-}
-.details p{
-    margin-left: 35px;
-    margin-top: 8px;
-    font-weight: normal;
-}
-/*suggestions...*/
-
-.suggestions{
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contactus {
+    width: 100%;
     display: flex;
-    margin-top: 50px;
-}
-.form{
-    margin-left: 110px;
-    height: 450px;
-    width: 460px;
-    background-color: #ffffff;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-
-}
-.input{
-    margin-top: 55px;
-    gap: 5px;
-    margin: auto;
-    width: 460px;
-    height: 60px;
-    background: rgb(224, 223, 223);
+    padding: 10px; /* Reduced padding from 20px to 10px */
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    gap: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  
+  .map {
+    width: 70%;
+    margin-left: 1rem;
+    float: right;
+    padding-right: 5px;
     border-radius: 10px;
-   
+  }
+  
+  .details {
+    float: right;
+  width: 50%;
+  padding-left: 5px; /* Adjusted padding */
+  padding: 20px; /* Keep the original padding for inner content */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+  }
+  
+  .details h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #007bff;
+  }
+  
+  .details p {
+    margin-bottom: 10px;
+    color: red;
+  }
+  
+  .suggestions {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the form container */
+.form {
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
 }
-.image img{
-    margin-right: 110px;
-    margin-left: 140px;
-    height: 650px;
-    width: 50px;
+
+/* Style for input containers */
+.input-contact {
+  width: 360px;
+  height: 50px;
+  margin-bottom: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+/* Style for input boxes */
+.inputBox-contact {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+}
+
+/* Style for submit button */
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+  .image {
+    text-align: center;
+    margin-bottom: 20px;
+    float: right;
+    width: 400px;
+    height: 400px;
+  }
+
+  /* Style for input containers */
+.input-contact {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* Style for input boxes */
+.inputBox-contact {
+  flex: 1;
+  margin-left: 10px; /* Adjust as needed for spacing between image and input */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  margin-right: 10px;
+}
+
+/* Style for images */
+.input-contact img {
+  width: 20px; /* Adjust image size as needed */
+  height: 20px; /* Adjust image size as needed */
+  margin-right: 10px;
+  margin-left: 10px;
 }
