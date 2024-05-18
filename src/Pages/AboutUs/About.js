@@ -31,9 +31,9 @@ const About = () => {
       <div className="history">
         <div className="history_paragraph">
           <h1>Why We</h1>
-          <p>Emergency response is the most critical to the lifeline of any country. Medulance wants to inspire breakthroughs
-            in the way India looks at ambulances and first-point medical attention and to touch lives. Medulance was started in
-            the year 2017 to make finding an ambulance as easy as finding food or taxis these days to assist lives. Medulance is
+          <p>Emergency response is the most critical to the lifeline of any country. SevaRide wants to inspire breakthroughs
+            in the way India looks at ambulances and first-point medical attention and to touch lives. SevaRide was started in
+            the year 2023 to make finding an ambulance as easy as finding cabs and order food these days to assist lives. Sevaride is
             an integrated emergency response support provider, ambulance booking and tracking system designed to provide first-point
             medical attention.</p>
         </div>
@@ -47,9 +47,9 @@ const About = () => {
         </div>
         <div className="content">
           <h1>Our Service Promise</h1>
-          <p>AmbiPalm will be right there at your fingertips offering Online Ambulance service giving an edge to medical assistance.
+          <p>Sevaride will be right there at your fingertips offering Online Ambulance service giving an edge to medical assistance.
             In the age of instant cabs and pizzas, we started off with the idea of online ambulance service to make ambulance booking
-            quick and hassle-free. Medical emergencies! An issue long put second on priority. AmbiPalm is here to change the idea with
+            quick and hassle-free. Medical emergencies! An issue long put second on priority. Sevaride is here to change the idea with
             online ambulance booking services and providing a platform to Request or Donate Blood.</p>
         </div>
       </div>
@@ -68,7 +68,7 @@ const About = () => {
         </div>
         <div className="solution">
           <h1>Solution</h1>
-          <p>Medulance Healthcare is India's first & leading comprehensive emergency response service provider, extensively dealing in the Ambulatory Services. We provide -</p>
+          <p> Healthcare is India's first & leading comprehensive emergency response service provider, extensively dealing in the Ambulatory Services. We provide -</p>
           <ul className="list">
             {solutions.map((item,index)=>(
               <li key={index}>{item}</li>
