@@ -12,7 +12,7 @@ const HomeScreen = () => {
     <div className="container-home">
       {/* booking part */}
       <div className="booking">
-        <h1>24/7 Emergency</h1>
+        <h1>24*7 Emergency</h1>
         <h1>Ambulance Care with SevaRide</h1>
         <h2>For Emergency Medical Service</h2>
         <p>

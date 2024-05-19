@@ -47,7 +47,7 @@ const Services = () => {
               </div>
             </div>
             <div className="card1 mt-5 border-2 shadow-md mb-3 ">
-              <img src={govt} alt="Goverments" />
+              <img src={govt} alt="Card1" />
               <div class="card-body">
                 <h5>Goverments</h5>
                 <p>
