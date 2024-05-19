@@ -5,14 +5,31 @@ import "./Login.css";
 
 const Login = () => {
 
+  // const [userRoll,setUserRoll]=useState("");
+  // const [driverRoll,setDriverRoll]=useState("");
  const navigate=useNavigate();
+
+ 
   const handlePatientClick = () => {
-    navigate("/login/user");
+    // setUserRoll("user")
+    navigate("/login/user",{
+      state:{
+        Roll:"user",
+      }
+    });
   };
 
   const handleDriverClick = () => {
-    navigate("/login/driver");
+    // setDriverRoll("driver");
+    navigate("/login/driver",{
+      state:{
+        Roll:"driver",
+      }
+    });
+
   };
+
+  // console.log(`userRoll: ${userRoll?userRoll:"Value is null"} : driverRoll:${driverRoll}`)
 
   return (
     <>
