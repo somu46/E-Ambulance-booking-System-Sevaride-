@@ -8,6 +8,7 @@ import { About,Login,Contact, Error,BookNow, Services } from './Pages';
 import Ride from './Pages/Ride/Ride.js';
 import SignUpRoot from './Pages/SignUp/RootOutelet/SignUpLogInRoot.js';
 import {User,Driver} from './Pages/SignUp/index.js';
+import { Toaster } from 'react-hot-toast';
 
 
 
@@ -75,6 +76,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
       <RouterProvider router={router}/>
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+        />
   </React.StrictMode>
 );
 
