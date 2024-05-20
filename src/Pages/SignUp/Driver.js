@@ -23,7 +23,7 @@ const Driver = () => {
       mobileNumber,
       emailId,
       licence,
-      Roll:"Driver",
+      Role:"Driver",
     };
 
      if(!driverData.driverName || !driverData.mobileNumber || !driverData.emailId || !driverData.licence){
