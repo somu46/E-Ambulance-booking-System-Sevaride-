@@ -23,21 +23,21 @@ const User = () => {
    const handleSubmit=(event)=>{
     event.preventDefault();
 
-    const data={
+    const PatientData={
       userName,
       mobileNumber,
-      userRoll
+      Roll:userRoll?userRoll:"user",
     }
-    console.log(data)
-    if(!data.userName|| !data.mobileNumber){
+    console.log(PatientData)
+    if(!PatientData.userName|| !PatientData.mobileNumber){
        toast.error("All field are Require!")
        return;
     }
-    toast.success(`${data.userName}   successfully! Logged In as Patient`);
+    toast.success(`${PatientData.userName} :  successfully! Logged In as Patient`);
 
     
     setTimeout(() => {
-      navigate("/BookNow")
+      navigate("/BookNow");
     }, 3000);
     
     // localStorage.setItem(data.userName,data)
