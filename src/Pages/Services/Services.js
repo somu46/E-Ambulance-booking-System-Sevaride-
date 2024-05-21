@@ -73,7 +73,7 @@ const Services = () => {
               </div>
             </div>
             <div className="card2 border-2 shadow-md mt-3 bg-red-100  p-3">
-              <img src={individual} alt="Card2" />
+              <img  src={individual} alt="Card2" />
               <div className=" card2-body">
                 <h5>Individual</h5>
                 <p>

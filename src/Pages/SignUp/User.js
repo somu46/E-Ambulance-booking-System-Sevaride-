@@ -9,61 +9,29 @@ import axios from 'axios';
 import qs from 'qs';
 
 const User = () => {
-  const location = useLocation();
-  const userRoll = location.state?.Roll;
-  const [userName, setUserName] = useState("");
-  const [mobileNumber, setMobileNumber] = useState("");
-  const [otp, setOtp] = useState("");
-  const [isOtpSent, setIsOtpSent] = useState(false);
-  const [generatedOtp, setGeneratedOtp] = useState(""); // State to store the generated OTP
-  const navigate = useNavigate();
+   
+  const location=useLocation();
+  const userRoll=location.state?.Roll;
+  const [userName,setUserName]=useState("");
+   const [mobileNumber,setMobileNumber]=useState(0);
+   const navigate=useNavigate();
+  
+  //  useEffect(() => {
+  //   console.log(`User roll is: ${userRoll}`);
+  // }, [userRoll]); 
 
-  const handleSubmit = async (event) => {
+   const handleSubmit=(event)=>{
     event.preventDefault();
 
     const PatientData = {
       userName,
       mobileNumber,
-      otp,
-      Roll: userRoll || "user",
-    };
-
-    if (!PatientData.userName || !PatientData.mobileNumber) {
-      toast.error("All fields are required!");
-      return;
+      Roll:userRoll?userRoll:"user",
     }
-
-    if (!isOtpSent) {
-      // Generate OTP
-      const otps = Math.floor(100000 + Math.random() * 900000).toString();
-      const finalOtp = `Your OTP is: ${otps}`;
-      setGeneratedOtp(otps);
-
-      // Send OTP
-      const data = qs.stringify({
-        "token": "ur0xsrzgr2gtvtgu",
-        "to": PatientData.mobileNumber,
-        "body": finalOtp,
-      });
-
-      const config = {
-        method: 'post',
-        url: 'https://api.ultramsg.com/instance86018/messages/chat',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        data: data
-      };
-
-      try {
-        await axios(config);
-        toast.success(`OTP sent to ${PatientData.mobileNumber}`);
-        setIsOtpSent(true);
-      } catch (error) {
-        toast.error("Failed to send OTP. Please try again.");
-        console.error(error);
-      }
-      return;
+    console.log(PatientData)
+    if(!PatientData.userName|| !PatientData.mobileNumber){
+       toast.error("All field are Require!")
+       return;
     }
 
     if (!PatientData.otp) {

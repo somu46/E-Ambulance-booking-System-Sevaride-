@@ -14,7 +14,7 @@ const Login = () => {
     // setUserRoll("user")
     navigate("/login/user",{
       state:{
-        Roll:"user",
+        Role:"user",
       }
     });
   };

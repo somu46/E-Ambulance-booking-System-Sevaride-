@@ -11,15 +11,15 @@ const Footer = () => {
 
   return (
     <footer className="footer overflow-x-hidden min-w-[100%]">
-      <div class=" relative flex flex-wrap flex-row justify-evenly min-w-full min-h-12 p-4 bg-white mx-1 mt-1 element ">
+      <div class=" relative flex flex-wrap flex-row justify-evenly min-w-full min-h-10 p-4 bg-white mx-1 mt-3 element ">
         <div className="relative flex flex-wrap flex-row justify-evenly m-5">
           <div className=" relative flex flex-wrap flex-col justify-center text-left max-w-[25%] h-autotext-black font-semibold m-3 p-3 min-h-9">
-            <a
+            <Link
               href="/"
               className="text-3xl font-bold m-3 text-left hover:text-pink-700 hover:scale-110 hover:border-2 transition-all duration-300 ease-in-out hover:tracking-wider "
             >
               <p className="seva">Seva</p><p className="ride">Ride</p>
-            </a>
+            </Link>
             <p className="text-sm ">
               The driver showed concern by waiting after the drop, to make sure
               the patient's home oxygen concentrator was working properly. 
@@ -40,12 +40,12 @@ const Footer = () => {
             </a>
           </div>
           <div className=" relative flex flex-wrap flex-col  max-w-[25%] h-auto text-black font-semibold m-3 p-4 min-h-9">
-            <p
+            <Link
               href="/"
               className="text-xl font-bold m-3  border-b-2 border-red-600  hover:text-red-600"
             >
               <p>SERVICES</p>
-            </p>
+            </Link>
             <Link to="/Contact" onClick={handleHistory} className="text-sm items-start text-left m-1   hover:text-red-600 ">
               Contact Us
             </Link>
