@@ -10,6 +10,9 @@ import SignUpRoot from "./Pages/SignUp/RootOutelet/SignUpLogInRoot.js";
 import { User, Driver } from "./Pages/SignUp/index.js";
 import { Toaster } from "react-hot-toast";
 import LoadingSpinner from "./components/Lazycomponents/LoadingSpinner.js";
+import { CustomSpinner } from "./components/Lazycomponents/LoadingSpinner.js";
+
+
 
 const App=lazy(()=>waitPromise(3000).then(()=>import("./App.js")));
 const BookNow = lazy(() => waitPromise(3000).then(()=>import("./Pages/BookNow/BookNow.js")));
@@ -73,7 +76,8 @@ const router = createBrowserRouter([
         path: "/Contact",
         element: (
           <Suspense
-          fallback={<div className=" min-h-screen flex justify-center items-center text-orange-700 text-3xl font-semibold">Pleas wait ! this page is loading...... </div>}
+          fallback={<CustomSpinner/>}
+          // fallback={<div className=" min-h-screen flex justify-center items-center text-orange-700 text-3xl font-semibold">Pleas wait ! this page is loading...... </div>}
           >
             <Contact/>
           </Suspense>
