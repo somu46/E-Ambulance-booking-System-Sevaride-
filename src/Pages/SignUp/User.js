@@ -11,7 +11,7 @@ import toast from 'react-hot-toast';//toast come from one of the react 3rd party
 const User = () => {
    
   const location=useLocation();
-  const userRoll=location.state?.Roll;
+  const userRoll=location.state?.Role;
   const [userName,setUserName]=useState("");
    const [mobileNumber,setMobileNumber]=useState(0);
    const navigate=useNavigate();
@@ -26,7 +26,7 @@ const User = () => {
     const PatientData={
       userName,
       mobileNumber,
-      Roll:userRoll?userRoll:"user",
+      Role:userRoll?userRoll:"user",
     }
     console.log(PatientData)
     if(!PatientData.userName|| !PatientData.mobileNumber){
