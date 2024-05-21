@@ -11,7 +11,7 @@ const Footer = () => {
 
   return (
     <footer className="footer overflow-x-hidden min-w-[100%]">
-      <div class=" relative flex flex-wrap flex-row justify-evenly min-w-full min-h-10 p-4 bg-white mx-1 mt-3 element ">
+      <div class=" relative flex flex-wrap flex-row justify-evenly min-w-full min-h-12 p-4 bg-white mx-1 mt-1 element ">
         <div className="relative flex flex-wrap flex-row justify-evenly m-5">
           <div className=" relative flex flex-wrap flex-col justify-center text-left max-w-[25%] h-autotext-black font-semibold m-3 p-3 min-h-9">
             <a
