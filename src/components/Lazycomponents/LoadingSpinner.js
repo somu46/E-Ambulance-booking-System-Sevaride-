@@ -13,7 +13,7 @@ const LoadingSpinner = () => {
 export const CustomSpinner=()=> {
   return( 
     <div className="flex items-center justify-center h-screen">
-     <Spinner className=" h-16 w-16 text-orange-500" />
+     <Spinner className=" h-16 w-16 text-blue-500/30" />
      </div>
 );
 }
