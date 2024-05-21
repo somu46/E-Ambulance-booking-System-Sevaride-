@@ -2,17 +2,27 @@ import React from "react";
 import { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
 import Root from "./Root/Root.js";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { About, Login, Contact, Error, Services } from "./Pages";
+import { About, Login, Error, Services } from "./Pages";
 import Ride from "./Pages/Ride/Ride.js";
 import SignUpRoot from "./Pages/SignUp/RootOutelet/SignUpLogInRoot.js";
 import { User, Driver } from "./Pages/SignUp/index.js";
 import { Toaster } from "react-hot-toast";
-import toast from 'react-hot-toast';
+import LoadingSpinner from "./components/Lazycomponents/LoadingSpinner.js";
 
-const BookNow = lazy(() => import("./Pages/BookNow/BookNow.js"));
+const App=lazy(()=>waitPromise(3000).then(()=>import("./App.js")));
+const BookNow = lazy(() => waitPromise(3000).then(()=>import("./Pages/BookNow/BookNow.js")));
+const Contact=lazy(()=>waitPromise(3000).then(()=>import("./Pages/ContactUs/Contact.js")));
+
+const waitPromise=(time)=>{
+    
+  return new Promise (resolve=>{
+    setTimeout(()=>{
+      resolve();
+    },time)
+  })
+}
 
 const link = document.createElement("link");
 link.href =
@@ -27,7 +37,15 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <App />,
+        element:(
+          <Suspense
+          fallback={<LoadingSpinner/>}
+          // fallback={<div className=" min-h-screen flex justify-center items-center text-orange-700 text-3xl font-semibold">Pleas wait  and keep your passion cold ! this page is loading...... </div>}
+          >
+                <App />
+          </Suspense>
+           
+          ),
       },
       {
         path: "login",
@@ -53,16 +71,22 @@ const router = createBrowserRouter([
       },
       {
         path: "/Contact",
-        element: <Contact />,
+        element: (
+          <Suspense
+          fallback={<div className=" min-h-screen flex justify-center items-center text-orange-700 text-3xl font-semibold">Pleas wait ! this page is loading...... </div>}
+          >
+            <Contact/>
+          </Suspense>
+        ),
       },
       {
         path: "/BookNow",
         element: (
           <Suspense
-            fallback={toast.success('Successfully toasted!')}
+            fallback={<div className=" min-h-screen flex justify-center items-center text-orange-700 text-3xl font-semibold">Pleas wait  and keep your passion cold ! this page is loading...... </div>}
           >
             <BookNow />
-            
+             
           </Suspense>
         ),
       },
