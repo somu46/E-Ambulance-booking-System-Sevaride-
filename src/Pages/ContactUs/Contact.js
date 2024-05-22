@@ -12,19 +12,20 @@ function Contact() {
     <div className="contact">
       <div className="contactus">
         <div className="map  overflow-hidden">
-          <iframe
-            title='map'
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d460.51860354846207!2d88.43279703281547!3d22.573536319478688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027576fbe9413f%3A0x4cc52b8725f7cddf!2sVDesk.space!5e0!3m2!1sen!2sin!4v1715680991179!5m2!1sen!2sin"
-            width="550"
-            height="500"
-            className='relative min-w-[100%]'
-            >
-          </iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.6598570986534!2d88.44885553788362!3d22.629173624046448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89f1492f6354b%3A0x795ae2f7973148c!2sRay!5e0!3m2!1sen!2sin!4v1716341640892!5m2!1sen!2sin" 
+        width="850" 
+        height="600" 
+        style={{border:0}} 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+
+        </iframe>
+          
         </div>
         <div className="details ">
           <h2>HEAD QUATERS</h2>
-          <p><b>Address:</b> Godrej Genesis Building, Block EP&GP, Sector V,<br />
-            Bidhannagar, Kolkata, West Bengal 700091
+          <p><b>Address:</b> Upahar, Rajarhat Main Rd, Tali Park, Newtown, Kolkata, West Bengal 700052
           </p>
           <h2>MAIL US</h2>
           <p>contact@sevaride.com<br /> support@sevaride.com</p>
