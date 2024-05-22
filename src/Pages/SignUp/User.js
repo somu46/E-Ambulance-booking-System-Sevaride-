@@ -36,7 +36,7 @@ const User = () => {
     if (!isOtpSent) {
       // Generate OTP
       const otps = Math.floor(100000 + Math.random() * 900000).toString();
-      const finalOtp = `Your OTP is: ${otps}`;
+      const finalOtp = `Welcome in SevaRide ${PatientData.userName}, your OTP is: ${otps}`;
       setGeneratedOtp(otps);
 
       // Send OTP
