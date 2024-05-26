@@ -3,7 +3,7 @@ the direction to the pickup location*/
 
 import React from 'react'
 import './driverRide.css'
-const driverRide = () => {
+const DriverRide = () => {
   return (
     <div>
         <h1>This page is now under Development</h1>
@@ -11,4 +11,4 @@ const driverRide = () => {
   )
 }
 
-export default driverRide
+export default DriverRide

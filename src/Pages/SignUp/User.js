@@ -36,10 +36,10 @@ const User = () => {
     if (!isOtpSent) {
       // Generate OTP
       const otps = Math.floor(100000 + Math.random() * 900000).toString();
-      const finalOtp = `Welcome in SevaRide ${PatientData.userName}, your OTP is: ${otps}`;
+      const finalOtp = `your otp is:${otps}`;
       setGeneratedOtp(otps);
 
-      // Send OTP
+      // Send OTP 
       const data = qs.stringify({
         "token": "ur0xsrzgr2gtvtgu",
         "to": PatientData.mobileNumber,
@@ -77,6 +77,15 @@ const User = () => {
         duration: 3000,
       
       });
+      //db
+      try {
+        await axios.post('http://localhost:8001/signup', { userName, mobileNumber });
+        toast.success(`${userName} and ${mobileNumber} stored in the database`);
+      } catch (error) {
+        toast.error("Failed to store user data. Please try again.");
+        console.error(error);
+      }
+      
       setTimeout(() => {
         navigate("/BookNow");
       }, 3000);
