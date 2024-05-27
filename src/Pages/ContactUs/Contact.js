@@ -4,6 +4,7 @@ import user from "../../Assets/person.png";
 import email from "../../Assets/email.png";
 import mobile from "../../Assets/phone.png";
 import contact from "../../Assets/contactus.png"
+import getintouch from "../../Assets/contact-us.png"
 function Contact() {
   return (
 
@@ -11,7 +12,7 @@ function Contact() {
 
     <div className="contact">
       <div className="contactus">
-        <div className="map overflow-hidden">
+        <div className="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.6598570986534!2d88.44885553788362!3d22.629173624046448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89f1492f6354b%3A0x795ae2f7973148c!2sRay!5e0!3m2!1sen!2sin!4v1716341640892!5m2!1sen!2sin" 
         width="850" 
         height="600" 
@@ -24,6 +25,7 @@ function Contact() {
           
         </div>
         <div className="details">
+          <img src={getintouch} alt="error"/>
           <h2>HEAD QUATERS</h2>
           <p><b>Address:</b> Upahar, Rajarhat Main Rd, Tali Park, Newtown, Kolkata, West Bengal 700052
           </p>
