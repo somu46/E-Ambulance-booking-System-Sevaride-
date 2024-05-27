@@ -47,7 +47,7 @@ const About = () => {
         <img src={service_promise} alt='error'/>
         <div className="content">
           <h1>Our Service Promise</h1>
-          <p>AmbiPalm will be right there at your fingertips offering Online Ambulance service giving an edge to medical assistance. In the age of instant cabs and pizzas, we started off with the idea of online ambulance service to make ambulance booking quick and hassle-free. Medical emergencies! An issue long put second on priority. AmbiPalm is here to change the idea with online ambulance booking services and providing a platform to Request or Donate Blood.</p>
+          <p>Sevaride will be right there at your fingertips offering Online Ambulance service giving an edge to medical assistance. In the age of instant cabs and pizzas, we started off with the idea of online ambulance service to make ambulance booking quick and hassle-free. Medical emergencies! An issue long put second on priority. AmbiPalm is here to change the idea with online ambulance booking services and providing a platform to Request or Donate Blood.</p>
         </div>
       </div>
       <div className="box">
@@ -62,7 +62,7 @@ const About = () => {
         </div>
         <div className="solution">
           <img src={solution} alt='error' height={200} width={250} />
-          <p>Medulance Healthcare is India's first & leading comprehensive emergency response service provider, extensively dealing in the Ambulatory Services. We provide -</p>
+          <p>Sevaride Healthcare is India's first & leading comprehensive emergency response service provider, extensively dealing in the Ambulatory Services. We provide</p>
           <ul className="list">
             {solutions.map((item, index) => (
               <li key={index}>{item}</li>
