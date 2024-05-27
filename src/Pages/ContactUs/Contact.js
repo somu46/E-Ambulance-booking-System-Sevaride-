@@ -54,9 +54,6 @@ function Contact() {
               </div>
               <button type='submit' className='submit-button'>Submit</button>
         </div>
-        <div className="image">
-            <img src={contact} alt='pic'/>
-        </div>
       </div>
     </div>
     </>
