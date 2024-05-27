@@ -9,6 +9,7 @@ import Ride from "./Pages/Ride/Ride.js";
 import SignUpRoot from "./Pages/SignUp/RootOutelet/SignUpLogInRoot.js";
 import { User, Driver } from "./Pages/SignUp/index.js";
 import { Toaster } from "react-hot-toast";
+import {DriverRide} from "./Pages";
 import LoadingSpinner from "./components/Lazycomponents/LoadingSpinner.js";
 import { CustomSpinner } from "./components/Lazycomponents/LoadingSpinner.js";
 
@@ -102,6 +103,10 @@ const router = createBrowserRouter([
       {
         path: "/Services",
         element: <Services />,
+      },
+      {
+        path:"/driverRide",
+        element: <DriverRide />
       },
       {
         path: "*",

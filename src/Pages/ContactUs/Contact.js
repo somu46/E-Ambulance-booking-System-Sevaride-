@@ -11,7 +11,7 @@ function Contact() {
 
     <div className="contact">
       <div className="contactus">
-        <div className="map  overflow-hidden">
+        <div className="map overflow-hidden">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.6598570986534!2d88.44885553788362!3d22.629173624046448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89f1492f6354b%3A0x795ae2f7973148c!2sRay!5e0!3m2!1sen!2sin!4v1716341640892!5m2!1sen!2sin" 
         width="850" 
         height="600" 
@@ -23,7 +23,7 @@ function Contact() {
         </iframe>
           
         </div>
-        <div className="details ">
+        <div className="details">
           <h2>HEAD QUATERS</h2>
           <p><b>Address:</b> Upahar, Rajarhat Main Rd, Tali Park, Newtown, Kolkata, West Bengal 700052
           </p>
@@ -42,7 +42,7 @@ function Contact() {
                 <img src={user} alt="user" />
                 <input type="text" className="inputBox-contact" placeholder="Enter Your Name"/>
               </div>
-              <div className=" input-contact">
+              <div className="input-contact">
                 <img src={mobile} alt="user" />
                 <input type="number" className="inputBox-contact" placeholder="Enter Your Mobile Number" />
               </div>

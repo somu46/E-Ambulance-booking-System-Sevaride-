@@ -88,7 +88,7 @@ const Driver = () => {
         toast.success(`${driverName}: successfully logged in as an Ambulance Driver`);
 
         setTimeout(() => {
-          navigate("/ride");
+          navigate("/driverRide");
         }, 3000);
 
         console.log({ driverName, mobileNumber, emailId, licence, Role: "Driver" });
