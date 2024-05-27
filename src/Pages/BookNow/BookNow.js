@@ -1,57 +1,55 @@
 import React, { useRef } from 'react'
 import { useState } from 'react';
 import './booknow.css';
-import {DirectionsRenderer, GoogleMap, useLoadScript} from '@react-google-maps/api';
+import { DirectionsRenderer, GoogleMap, useLoadScript } from '@react-google-maps/api';
 import { Autocomplete } from '@react-google-maps/api';
 
 // import { faL } from '@fortawesome/free-solid-svg-icons';
 
 
 
-const libraries=['places'];
-const mapContainerStyle={
-    width:'900px',
-    height:'500px',
+const libraries = ['places'];
+const mapContainerStyle = {
+    width: '900px',
+    height: '500px',
 };
-const center= {
-    lat:22.5726,
+const center = {
+    lat: 22.5726,
     lng: 88.3639,
 };
-const centera= {
-    lat:22.6293280,
+const centera = {
+    lat: 22.6293280,
     lng: 88.4521199,
 };
 function BookNow() {
-    const {isLoaded,loadError}=useLoadScript({
-        googleMapsApiKey:'AIzaSyArLrFzhkdvcDGuESCEKQMGY-Ob9UoihNQ',
+    const { isLoaded, loadError } = useLoadScript({
+        googleMapsApiKey: 'AIzaSyArLrFzhkdvcDGuESCEKQMGY-Ob9UoihNQ',
         libraries,
     });
-const [map, setmap] = useState(/**@type google.maps.Map*/(null))
-const [directionsResponses, setdirectionsResponses] = useState(null)
-const [distance, setdistance] = useState('')
-const [duration, setduration] = useState('')
+    const [map, setmap] = useState(/**@type google.maps.Map*/(null))
+    const [directionsResponses, setdirectionsResponses] = useState(null)
+    const [distance, setdistance] = useState('')
+    const [duration, setduration] = useState('')
 
-/** @type React.MutableRefObject<HTML.InputElement> */
-const originRef=useRef()
-/** @type React.MutableRefObject<HTML.InputElement> */
-const destinationRef=useRef()
+    /** @type React.MutableRefObject<HTML.InputElement> */
+    const originRef = useRef()
+    /** @type React.MutableRefObject<HTML.InputElement> */
+    const destinationRef = useRef()
 
-    if(loadError)
-    {
+    if (loadError) {
         return <div>Error Loading Maps</div>;
     }
-    if(!isLoaded)
-    {
+    if (!isLoaded) {
         return <div>Loading Maps</div>
     }
     /**DIRECTION ROUTE */
-    
-    async function calculateroute(){
-        if(originRef.current.value ===''|| destinationRef.current.value ===''){
+
+    async function calculateroute() {
+        if (originRef.current.value === '' || destinationRef.current.value === '') {
             return
         }
         //eslint-disable-next-line no-undef
-        const directionService= new google.maps.DirectionsService()
+        const directionService = new google.maps.DirectionsService()
         const results = await directionService.route({
             origin: originRef.current.value,
             destination: destinationRef.current.value,
@@ -62,53 +60,53 @@ const destinationRef=useRef()
         setdistance(results.routes[0].legs[0].distance.text)
         setduration(results.routes[0].legs[0].duration.text)
     }
-    function clearRoute(){
+    function clearRoute() {
         setdirectionsResponses(null)
         setdistance('')
         setduration('')
-        originRef.current.value=''
-        destinationRef.current.value=''
+        originRef.current.value = ''
+        destinationRef.current.value = ''
     }
 
 
-  return (
-    <div className="home">
-       <div className="searchbar">
-            <p className="heading">Get a Ride</p>
-           <Autocomplete>
-                <input className=" p-3" type="text" placeholder="Pickup Location" ref={originRef}></input>
-           </Autocomplete>
+    return (
+        <div className="home">
+            <div className="searchbar">
+                <p className="heading">Get a Ride</p>
+                <Autocomplete>
+                    <input className=" p-3" type="text" placeholder="Pickup Location" ref={originRef}></input>
+                </Autocomplete>
 
-           <Autocomplete>
-                <input  className=" p-3" type="text" placeholder="Dropoff Location" ref={destinationRef}></input>
-           </Autocomplete>
-           <button type="button" onClick={calculateroute}>Search</button>
-           <button type="button" onClick={()=>map.panTo(centera)}>Your Location</button>
-           <button type="button" onClick={clearRoute}>Clear Route</button>
-      
+                <Autocomplete>
+                    <input className=" p-3" type="text" placeholder="Dropoff Location" ref={destinationRef}></input>
+                </Autocomplete>
+                <button type="button" onClick={calculateroute}>Search</button>
+                <button type="button" onClick={() => map.panTo(centera)}>Your Location</button>
+                <button type="button" onClick={clearRoute}>Clear Route</button>
 
-           <p className="dis_dur">Distance:  {distance} </p>
-           <p className="dis_dur">Duration:  {duration}</p>
 
-       </div>
-       <div className="map">
+                <p className="dis_dur">Distance:  {distance} </p>
+                <p className="dis_dur">Duration:  {duration}</p>
 
-            <GoogleMap
-                mapContainerStyle={mapContainerStyle}
-                zoom={10}
-                center={center}
-               options={{
-                zoomControl:true,
-                fullscreenControl:false,
-                mapTypeControl:false,
-               }}
-                onLoad={(map)=>setmap(map)}
-            >
-                {directionsResponses && <DirectionsRenderer directions={directionsResponses}/>}
-            </GoogleMap>
-       </div>
-    </div>
-  )
+            </div>
+            <div className="map">
+
+                <GoogleMap
+                    mapContainerStyle={mapContainerStyle}
+                    zoom={10}
+                    center={center}
+                    options={{
+                        zoomControl: true,
+                        fullscreenControl: true,
+                        mapTypeControl: true,
+                    }}
+                    onLoad={(map) => setmap(map)}
+                >
+                    {directionsResponses && <DirectionsRenderer directions={directionsResponses} />}
+                </GoogleMap>
+            </div>
+        </div>
+    )
 }
 
 export default BookNow;
