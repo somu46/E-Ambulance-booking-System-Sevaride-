@@ -3,15 +3,16 @@
 .contact {
     display: flex;
     flex-direction: column;
-  
+    border: none;
+    outline: none;
   }
   
   .contactus {
     width: 100%;
     display: flex;
     padding: 10px; /* Reduced padding from 20px to 10px */
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
+    /* background-color: #f9f9f9; */
+    /* border: 1px solid #ccc; */
     border-radius: 8px;
     gap: 10px;
     margin-bottom: 10px;
@@ -31,7 +32,7 @@
   width: 50%;
   padding-left: 5px; /* Adjusted padding */
   padding: 20px; /* Keep the original padding for inner content */
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   
