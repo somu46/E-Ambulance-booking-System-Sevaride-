@@ -1,0 +1,61 @@
+/* Styles for the container holding the form */
+.driver-container-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+/* Styles for each login field */
+.driver-login {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 300px;
+    height: 60px;
+    background-color:#ccc ;
+    border-radius: 10px;
+}
+
+/* Styles for the icons */
+.driver-login img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+/* Styles for the input fields */
+.driver-login input{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+/* Styles for the submit button */
+/* button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color:#324595;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #e50614;
+} */
