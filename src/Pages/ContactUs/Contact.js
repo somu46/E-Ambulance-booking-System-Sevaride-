@@ -18,6 +18,7 @@ function Contact() {
         style={{border:0}} 
         allowfullscreen="" 
         loading="lazy" 
+        title='google Map'
         referrerpolicy="no-referrer-when-downgrade">
 
         </iframe>
