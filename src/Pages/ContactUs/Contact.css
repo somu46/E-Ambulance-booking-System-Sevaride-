@@ -3,7 +3,7 @@
 .contact {
     display: flex;
     flex-direction: column;
-    align-items: center;
+  
   }
   
   .contactus {
@@ -36,16 +36,24 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   
   }
+  .details img{
+    height: 300px;
+    width: 300px;
+    margin-left: 130px;
+    margin-top: -30px;
+    
+  }
   
   .details h2 {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 5px;
-    color: #007bff;
+    color: #fc2361;
+    font-weight: 800;
   }
   
   .details p {
     margin-bottom: 10px;
-    color: red;
+    font-size: 18px;
   }
   
   .suggestions {
