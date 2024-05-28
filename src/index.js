@@ -19,6 +19,7 @@ const App=lazy(()=>waitPromise(3000).then(()=>import("./App.js")));
 const BookNow = lazy(() => waitPromise(3000).then(()=>import("./Pages/BookNow/BookNow.js")));
 const Contact=lazy(()=>waitPromise(3000).then(()=>import("./Pages/ContactUs/Contact.js")));
 
+
 const waitPromise=(time)=>{
     
   return new Promise (resolve=>{

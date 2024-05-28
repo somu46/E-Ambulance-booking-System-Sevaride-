@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import ambulancePic from "../../Assets/ambulance-pic.jpg";
 import Button from "../../components/Button/Button";
+ import { useLocation } from "react-router";
+
+
 
 const AmbulanceType = [
   {
@@ -96,7 +99,12 @@ const Rides = () => {
 };
 
 const Ride = () => {
+
   const [divParts, setDivParts] = useState(2);
+  const Location=useLocation();
+
+ const { pickUpLocation,dropOffLocation,distance,duration}=Location.state||{};
+
 
   const handleButtonClick = () => {
     setDivParts(3);
@@ -106,9 +114,14 @@ const Ride = () => {
   }
 
   return (
-    <div className="transition-all duration-1000 ease-in-out">
+    <div className="transition-all duration-1000 ease-in-out ">
       <div style={{ display: "inline-block", width: `${90 / divParts}% ` }}>
-        <div className="bg-blue-500 h-32 m-2">Part 1</div>
+        <div className=" h-auto m-2 border-2 border-orange-400 p-2">
+       <p className="text-xl font-serif tex-black mb-2">Your pick Up Location :<span className="font-mono text-orange-500">{ pickUpLocation}</span></p> 
+       <p className="text-xl font-serif tex-black mb-2.5">Your drop Off Location :<span className="font-mono text-orange-500">{dropOffLocation}</span></p> 
+       <p className="text-xl font-serif tex-black mb-2.5"> Distance:<span className="font-mono text-orange-500">{distance}</span> </p> 
+       <p className="text-xl font-serif tex-black mb-2.5">Duration:<span className="font-mono text-orange-500">{duration}</span> </p> 
+        </div>
       </div>
       {divParts === 3 && (
         <div style={{ display: "inline-block", width: `${100 / divParts}%` }}>

@@ -3,8 +3,9 @@ import "./Contact.css";
 import user from "../../Assets/person.png";
 import email from "../../Assets/email.png";
 import mobile from "../../Assets/phone.png";
-import contact from "../../Assets/contactus.png"
+// import contact from "../../Assets/contactus.png"
 import getintouch from "../../Assets/contact-us.png"
+
 function Contact() {
   return (
 
@@ -19,6 +20,7 @@ function Contact() {
         style={{border:0}} 
         allowfullscreen="" 
         loading="lazy" 
+        title='google Map'
         referrerpolicy="no-referrer-when-downgrade">
 
         </iframe>
