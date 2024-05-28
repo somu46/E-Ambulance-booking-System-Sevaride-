@@ -66,6 +66,11 @@
     cursor: pointer;
     margin-left: 10px;
 }
+.searchbar button:hover{
+    background-color: #e79c9c;
+    border-radius: 10px;
+    border:2px solid aqua;
+}
 .dis_dur {
     color: #f43f5e;
     text-align: left;
