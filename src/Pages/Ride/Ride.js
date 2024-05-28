@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import ambulancePic from "../../Assets/ambulance-pic.jpg";
 import Button from "../../components/Button/Button";
+import { useLocation } from "react-router";
+
+
+
+
 
 const AmbulanceType = [
   {
@@ -24,6 +29,7 @@ const AmbulanceType = [
 ];
 
 const Card = ({ id, isSelected, onSelect, ambulance }) => {
+
   return (
     <div
       onClick={() => onSelect(isSelected ? null : id)}
@@ -96,6 +102,16 @@ const Rides = () => {
 };
 
 const Ride = () => {
+
+
+  const Location=useLocation();
+
+  const  { pickUpLocation, dropOffLocation, distance } =Location.state||{};
+
+  console.log("pickUpLocation IS: "+ pickUpLocation);
+  console.log(dropOffLocation);
+  console.log(distance);
+
   const [divParts, setDivParts] = useState(2);
 
   const handleButtonClick = () => {
@@ -108,7 +124,9 @@ const Ride = () => {
   return (
     <div className="transition-all duration-1000 ease-in-out">
       <div style={{ display: "inline-block", width: `${90 / divParts}% ` }}>
-        <div className="bg-blue-500 h-32 m-2">Part 1</div>
+        <div className="bg-white h-32 m-2">
+        { pickUpLocation}, {dropOffLocation}, {distance }
+        </div>
       </div>
       {divParts === 3 && (
         <div style={{ display: "inline-block", width: `${100 / divParts}%` }}>

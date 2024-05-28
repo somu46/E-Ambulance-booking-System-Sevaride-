@@ -78,27 +78,28 @@ const BookNow = () => {
     // console.log( typeof data.distance)
 
     try {
-      const response = await fetch("http://localhost:8080/api/bookNow", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+    //   const response = await fetch("http://localhost:8080/api/bookNow", {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify(data),
+    //   });
 
-      if (!response.ok) {
-        const errorText = await response.text(); // Get detailed error message from server
-        throw new Error(
-          `HTTP error! status: ${response.status}, message: ${errorText}`
-        );
-      }
+    //   if (!response.ok) {
+    //     const errorText = await response.text(); // Get detailed error message from server
+    //     throw new Error(
+    //       `HTTP error! status: ${response.status}, message: ${errorText}`
+    //     );
+    //   }
 
-      const responseData = await response.json();
-      console.log("Data sent successfully! Response:", responseData);
+    //   const responseData = await response.json();
+    
+    //   console.log("Data sent successfully! Response:", responseData);
 
-      if (response.ok) {
+      if (true) {
         setTimeout(() => {
-          navigate("/ride",{state:responseData});
+          navigate("/ride",{state:data});
         }, 1000);
       }
     } catch (error) {
