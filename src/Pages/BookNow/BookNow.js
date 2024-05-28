@@ -38,7 +38,7 @@ const BookNow = () => {
             if (place && place.formatted_address) {
                 setPickUpLocation(place.formatted_address);
             } else {
-                console.error("Pickup place is not defined or does not have a formatted address"); // Error log
+                // console.error("Pickup place is not defined or does not have a formatted address"); // Error log
             }
         } else if (type === 'dropoff') {
             const place = destinationRef.current.getPlace();
@@ -46,16 +46,53 @@ const BookNow = () => {
             if (place && place.formatted_address) {
                 setDropOffLocation(place.formatted_address);
             } else {
-                console.error("Dropoff place is not defined or does not have a formatted address"); // Error log
+                // console.error("Dropoff place is not defined or does not have a formatted address"); // Error log
             }
         }
     }, []);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("Pickup Location:", pickUpLocation);
-        console.log("Dropoff Location:", dropOffLocation);
+        // console.log("Pickup Location:", pickUpLocation);
+        // console.log("Dropoff Location:", dropOffLocation);
+
+        const extractNumberFromDistance = (distance) => {
+            const match = distance.match(/([\d.]+)/);
+            return match ? parseFloat(match[0]) : 0;
+        };
+        const numericDistance = extractNumberFromDistance(distance);
+    
+        const data = {
+            pickUpLocation: pickUpLocation,
+            dropOffLocation: dropOffLocation,
+            distance: numericDistance,
+        
+        };
+        // console.log( typeof data.distance)
+
+        try {
+            const response = await fetch('http://localhost:8080/api/bookNow', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (!response.ok) {
+                const errorText = await response.text(); // Get detailed error message from server
+                throw new Error(`HTTP error! status: ${response.status}, message: ${errorText}`);
+            }
+
+            const responseData = await response.json();
+            console.log("Data sent successfully! Response:", responseData);
+        } catch (error) {
+            console.error("Error sending data:", error);
+        }
     }
+
+
+
 
     const { isLoaded, loadError } = useLoadScript({
         googleMapsApiKey: 'AIzaSyArLrFzhkdvcDGuESCEKQMGY-Ob9UoihNQ', // Replace with your API key
@@ -71,7 +108,7 @@ const BookNow = () => {
             const destinationPlace = destinationRef.current.getPlace();
 
             if (!originPlace || !destinationPlace) {
-                console.error("Origin or destination place is not defined"); // Error log
+                // console.error("Origin or destination place is not defined"); // Error log
                 return;
             }
 
@@ -79,11 +116,11 @@ const BookNow = () => {
             const destination = destinationPlace.formatted_address;
 
             if (!origin || !destination) {
-                console.error("Origin or destination is empty"); // Error log
+                // console.error("Origin or destination is empty"); // Error log
                 return;
             }
 
-            console.log("Calculating route from", origin, "to", destination); // Debug log
+            // console.log("Calculating route from", origin, "to", destination); // Debug log
 
             try {
                 //eslint-disable-next-line no-undef
@@ -95,16 +132,16 @@ const BookNow = () => {
                     travelMode: google.maps.TravelMode.DRIVING,
                 });
 
-                console.log("Directions results:", results); // Debug log
+                // console.log("Directions results:", results); // Debug log
 
                 setDirectionsResponses(results);
                 setDistance(results.routes[0].legs[0].distance.text);
                 setDuration(results.routes[0].legs[0].duration.text);
             } catch (error) {
-                console.error("Error calculating route:", error); // Error log
+                // console.error("Error calculating route:", error); // Error log
             }
         } else {
-            console.error("Origin or destination reference is null"); // Error log
+            // console.error("Origin or destination reference is null"); // Error log
         }
     };
 
@@ -122,7 +159,7 @@ const BookNow = () => {
                 <p className="heading">Get a Ride</p>
                 <Autocomplete
                     onLoad={(autocomplete) => {
-                        console.log("Pickup Autocomplete initialized", autocomplete); // Debug log
+                        // console.log("Pickup Autocomplete initialized", autocomplete); // Debug log
                         originRef.current = autocomplete;
                     }}
                     onPlaceChanged={() => handlePlaceChanged('pickup')}
@@ -137,7 +174,7 @@ const BookNow = () => {
 
                 <Autocomplete
                     onLoad={(autocomplete) => {
-                        console.log("Dropoff Autocomplete initialized", autocomplete); // Debug log
+                        // console.log("Dropoff Autocomplete initialized", autocomplete); // Debug log
                         destinationRef.current = autocomplete;
                     }}
                     onPlaceChanged={() => handlePlaceChanged('dropoff')}
