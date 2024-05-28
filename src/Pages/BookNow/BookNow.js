@@ -31,25 +31,108 @@ const [directionsResponses, setdirectionsResponses] = useState(null)
 const [distance, setdistance] = useState('')
 const [duration, setduration] = useState('')
 
-/** @type React.MutableRefObject<HTML.InputElement> */
-const originRef=useRef()
-/** @type React.MutableRefObject<HTML.InputElement> */
-const destinationRef=useRef()
+  /** @type React.MutableRefObject<HTML.InputElement> */
+  const originRef = useRef(null);
+  /** @type React.MutableRefObject<HTML.InputElement> */
+  const destinationRef = useRef(null);
 
-    if(loadError)
-    {
-        return <div>Error Loading Maps</div>;
+  const handlePlaceChanged = useCallback((type) => {
+    if (type === "pickup") {
+      const place = originRef.current.getPlace();
+      console.log("Pickup place details:", place); // Debug log to check place details
+      if (place && place.formatted_address) {
+        setPickUpLocation(place.formatted_address);
+      } else {
+        // console.error("Pickup place is not defined or does not have a formatted address"); // Error log
+      }
+    } else if (type === "dropoff") {
+      const place = destinationRef.current.getPlace();
+      console.log("Dropoff place details:", place); // Debug log to check place details
+      if (place && place.formatted_address) {
+        setDropOffLocation(place.formatted_address);
+      } else {
+        // console.error("Dropoff place is not defined or does not have a formatted address"); // Error log
+      }
     }
-    if(!isLoaded)
-    {
-        return <div>Loading Maps</div>
-    }
-    /**DIRECTION ROUTE */
+  }, []);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // console.log("Pickup Location:", pickUpLocation);
+    // console.log("Dropoff Location:", dropOffLocation);
+
+    const extractNumberFromDistance = (distance) => {
+      const match = distance.match(/([\d.]+)/);
+      return match ? parseFloat(match[0]) : 0;
+    };
+    const numericDistance = extractNumberFromDistance(distance);
+
+    const data = {
+      pickUpLocation: pickUpLocation,
+      dropOffLocation: dropOffLocation,
+      distance: numericDistance,
+    };
+    // console.log( typeof data.distance)
+
+    try {
+    //   const response = await fetch("http://localhost:8080/api/bookNow", {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify(data),
+    //   });
+
+    //   if (!response.ok) {
+    //     const errorText = await response.text(); // Get detailed error message from server
+    //     throw new Error(
+    //       `HTTP error! status: ${response.status}, message: ${errorText}`
+    //     );
+    //   }
+
+    //   const responseData = await response.json();
     
-    async function calculateroute(){
-        if(originRef.current.value ===''|| destinationRef.current.value ===''){
-            return
-        }
+    //   console.log("Data sent successfully! Response:", responseData);
+
+      if (true) {
+        setTimeout(() => {
+          navigate("/ride",{state:data});
+        }, 1000);
+      }
+    } catch (error) {
+      console.error("Error sending data:", error);
+    }
+  };
+
+  const { isLoaded, loadError } = useLoadScript({
+    googleMapsApiKey: "AIzaSyArLrFzhkdvcDGuESCEKQMGY-Ob9UoihNQ", // Replace with your API key
+    libraries,
+  });
+
+  if (loadError) return <div>Error Loading Maps</div>;
+  if (!isLoaded) return <div>Loading Maps</div>;
+
+  const calculateRoute = async () => {
+    if (originRef.current && destinationRef.current) {
+      const originPlace = originRef.current.getPlace();
+      const destinationPlace = destinationRef.current.getPlace();
+
+      if (!originPlace || !destinationPlace) {
+        // console.error("Origin or destination place is not defined"); // Error log
+        return;
+      }
+
+      const origin = originPlace.formatted_address;
+      const destination = destinationPlace.formatted_address;
+
+      if (!origin || !destination) {
+        // console.error("Origin or destination is empty"); // Error log
+        return;
+      }
+
+      // console.log("Calculating route from", origin, "to", destination); // Debug log
+
+      try {
         //eslint-disable-next-line no-undef
         const directionService= new google.maps.DirectionsService()
         const results = await directionService.route({
