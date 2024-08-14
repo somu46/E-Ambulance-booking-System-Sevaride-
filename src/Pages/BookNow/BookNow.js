@@ -153,7 +153,7 @@ const BookNow = () => {
     };
 
     const { isLoaded, loadError } = useLoadScript({
-        googleMapsApiKey: 'AIzaSyArLrFzhkdvcDGuESCEKQMGY-Ob9UoihNQ',
+        googleMapsApiKey: '',
         libraries,
     });
 
